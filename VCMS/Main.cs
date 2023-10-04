@@ -74,7 +74,9 @@ namespace VCMS
                 logoLabel.Visible = true;
             }
             titleLabel.Left = sidePanel.Width;
-            titleLabel.Width = this.Width-(sidePanel.Width+buttonsPanel.Width);
+            titleLabel.Width = this.Width - (sidePanel.Width+buttonsPanel.Width);
+            formPanel.Left = sidePanel.Width;
+            formPanel.Width = this.Width - sidePanel.Width;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -156,6 +158,7 @@ namespace VCMS
         private void CostumersButton_Click(object sender, EventArgs e)
         {
             // TODO: Open costumer form here
+            OpenChildForm(new Costumers());
         }
         private void ServicesButton_Click(object sender, EventArgs e)
         {
