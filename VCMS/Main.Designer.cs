@@ -93,7 +93,7 @@
             this.logoLabel.Size = new System.Drawing.Size(113, 26);
             this.logoLabel.TabIndex = 15;
             this.logoLabel.Text = "VCMS";
-            this.logoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoLabel.DoubleClick += new System.EventHandler(this.BurgerButton_Click);
             this.logoLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 

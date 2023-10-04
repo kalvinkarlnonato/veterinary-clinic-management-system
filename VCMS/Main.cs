@@ -17,7 +17,7 @@ namespace VCMS
     public partial class Main : Form
     {
 
-        #region FormUI
+        #region Others
         //Fields
         private const int cGrip = 16;
         private readonly int sizePanelSize = 150;
@@ -74,7 +74,9 @@ namespace VCMS
                 logoLabel.Visible = true;
             }
             titleLabel.Left = sidePanel.Width;
-            titleLabel.Width = this.Width-(sidePanel.Width+buttonsPanel.Width);
+            titleLabel.Width = this.Width - (sidePanel.Width+buttonsPanel.Width);
+            formPanel.Left = sidePanel.Width;
+            formPanel.Width = this.Width - sidePanel.Width;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -123,14 +125,6 @@ namespace VCMS
         {
             SaveSizeRosolution();
         }
-        #endregion
-        private Form currentChildForm;
-        public Main()
-        {
-            InitializeComponent();
-            LoadSizeResolution();
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
-        }
         private void OpenChildForm(Form childForm)
         {
             if (currentChildForm != null)
@@ -148,6 +142,15 @@ namespace VCMS
             childForm.Show();
             titleLabel.Text = childForm.Text;
         }
+        #endregion
+        private Form currentChildForm;
+        public Main()
+        {
+            InitializeComponent();
+            LoadSizeResolution();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            OpenChildForm(new Home());
+        }
         private void LogoPicture_Click(object sender, EventArgs e)
         {
             // TODO: Open home form here
@@ -156,6 +159,7 @@ namespace VCMS
         private void CostumersButton_Click(object sender, EventArgs e)
         {
             // TODO: Open costumer form here
+            OpenChildForm(new Costumers());
         }
         private void ServicesButton_Click(object sender, EventArgs e)
         {
