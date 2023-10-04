@@ -38,17 +38,15 @@
             this.doctorsButton = new FontAwesome.Sharp.IconButton();
             this.logoPicture = new System.Windows.Forms.PictureBox();
             this.costumersButton = new FontAwesome.Sharp.IconButton();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.bodyContainer = new System.Windows.Forms.Panel();
             this.formPanel = new System.Windows.Forms.Panel();
             this.minimizeButton = new FontAwesome.Sharp.IconButton();
             this.sizeButon = new FontAwesome.Sharp.IconButton();
             this.closeButton = new FontAwesome.Sharp.IconButton();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.buttonsPanel = new System.Windows.Forms.Panel();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).BeginInit();
-            this.containerPanel.SuspendLayout();
-            this.bodyContainer.SuspendLayout();
+            this.buttonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -233,36 +231,14 @@
             this.costumersButton.UseVisualStyleBackColor = true;
             this.costumersButton.Click += new System.EventHandler(this.CostumersButton_Click);
             // 
-            // containerPanel
-            // 
-            this.containerPanel.BackColor = System.Drawing.Color.White;
-            this.containerPanel.Controls.Add(this.bodyContainer);
-            this.containerPanel.Controls.Add(this.sidePanel);
-            this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerPanel.Location = new System.Drawing.Point(0, 0);
-            this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(892, 455);
-            this.containerPanel.TabIndex = 15;
-            // 
-            // bodyContainer
-            // 
-            this.bodyContainer.Controls.Add(this.formPanel);
-            this.bodyContainer.Controls.Add(this.minimizeButton);
-            this.bodyContainer.Controls.Add(this.sizeButon);
-            this.bodyContainer.Controls.Add(this.closeButton);
-            this.bodyContainer.Controls.Add(this.titleLabel);
-            this.bodyContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bodyContainer.Location = new System.Drawing.Point(150, 0);
-            this.bodyContainer.Name = "bodyContainer";
-            this.bodyContainer.Size = new System.Drawing.Size(742, 455);
-            this.bodyContainer.TabIndex = 15;
-            // 
             // formPanel
             // 
-            this.formPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.formPanel.Location = new System.Drawing.Point(0, 65);
+            this.formPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.formPanel.Location = new System.Drawing.Point(150, 64);
             this.formPanel.Name = "formPanel";
-            this.formPanel.Size = new System.Drawing.Size(742, 390);
+            this.formPanel.Size = new System.Drawing.Size(742, 376);
             this.formPanel.TabIndex = 19;
             // 
             // minimizeButton
@@ -274,12 +250,13 @@
             this.minimizeButton.IconColor = System.Drawing.Color.Black;
             this.minimizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.minimizeButton.IconSize = 30;
-            this.minimizeButton.Location = new System.Drawing.Point(659, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(67, 2);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(24, 24);
             this.minimizeButton.TabIndex = 18;
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
+            this.minimizeButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
             // sizeButon
             // 
@@ -290,12 +267,13 @@
             this.sizeButon.IconColor = System.Drawing.Color.Black;
             this.sizeButon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sizeButon.IconSize = 30;
-            this.sizeButon.Location = new System.Drawing.Point(687, 2);
+            this.sizeButon.Location = new System.Drawing.Point(95, 3);
             this.sizeButon.Name = "sizeButon";
             this.sizeButon.Size = new System.Drawing.Size(24, 24);
             this.sizeButon.TabIndex = 17;
             this.sizeButon.UseVisualStyleBackColor = true;
             this.sizeButon.Click += new System.EventHandler(this.SizeButon_Click);
+            this.sizeButon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
             // closeButton
             // 
@@ -306,25 +284,39 @@
             this.closeButton.IconColor = System.Drawing.Color.Black;
             this.closeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.closeButton.IconSize = 30;
-            this.closeButton.Location = new System.Drawing.Point(715, 2);
+            this.closeButton.Location = new System.Drawing.Point(123, 3);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(24, 24);
             this.closeButton.TabIndex = 16;
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            this.closeButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
             // titleLabel
             // 
-            this.titleLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(0, 0);
+            this.titleLabel.Location = new System.Drawing.Point(150, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(742, 65);
+            this.titleLabel.Size = new System.Drawing.Size(591, 65);
             this.titleLabel.TabIndex = 15;
             this.titleLabel.Text = "SNIFFS AND LICKS CLINIC";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.titleLabel.DoubleClick += new System.EventHandler(this.SizeButon_Click);
             this.titleLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
+            // 
+            // buttonsPanel
+            // 
+            this.buttonsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonsPanel.Controls.Add(this.closeButton);
+            this.buttonsPanel.Controls.Add(this.sizeButon);
+            this.buttonsPanel.Controls.Add(this.minimizeButton);
+            this.buttonsPanel.Location = new System.Drawing.Point(742, 0);
+            this.buttonsPanel.Name = "buttonsPanel";
+            this.buttonsPanel.Size = new System.Drawing.Size(150, 65);
+            this.buttonsPanel.TabIndex = 0;
+            this.buttonsPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
             // Main
             // 
@@ -333,10 +325,14 @@
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(892, 455);
             this.ControlBox = false;
-            this.Controls.Add(this.containerPanel);
+            this.Controls.Add(this.sidePanel);
+            this.Controls.Add(this.formPanel);
+            this.Controls.Add(this.buttonsPanel);
+            this.Controls.Add(this.titleLabel);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DoubleBuffered = true;
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -349,8 +345,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
-            this.containerPanel.ResumeLayout(false);
-            this.bodyContainer.ResumeLayout(false);
+            this.buttonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -363,15 +358,14 @@
         private FontAwesome.Sharp.IconButton receptionistButton;
         private FontAwesome.Sharp.IconButton servicesButton;
         private FontAwesome.Sharp.IconButton doctorsButton;
-        private System.Windows.Forms.Panel containerPanel;
         private System.Windows.Forms.Label logoLabel;
-        private System.Windows.Forms.Panel bodyContainer;
         private FontAwesome.Sharp.IconButton minimizeButton;
         private FontAwesome.Sharp.IconButton sizeButon;
         private FontAwesome.Sharp.IconButton closeButton;
         private System.Windows.Forms.Label titleLabel;
         private FontAwesome.Sharp.IconButton burgerButton;
         private System.Windows.Forms.Panel formPanel;
+        private System.Windows.Forms.Panel buttonsPanel;
     }
 }
 

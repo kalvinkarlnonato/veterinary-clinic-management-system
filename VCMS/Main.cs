@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using VCMS.Library;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
+using VCMS.Forms;
 
 namespace VCMS
 {
@@ -18,6 +19,7 @@ namespace VCMS
 
         #region FormUI
         //Fields
+        private const int cGrip = 16;
         private readonly int sizePanelSize = 150;
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
@@ -71,6 +73,27 @@ namespace VCMS
                 sidePanel.Width = sizePanelSize;
                 logoLabel.Visible = true;
             }
+            titleLabel.Left = sidePanel.Width;
+            titleLabel.Width = this.Width-(sidePanel.Width+buttonsPanel.Width);
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
+            ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
+        }
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x84)
+            {  // Trap WM_NCHITTEST
+                Point pos = new Point(m.LParam.ToInt32());
+                pos = this.PointToClient(pos);
+                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr)17; // HTBOTTOMRIGHT
+                    return;
+                }
+            }
+            base.WndProc(ref m);
         }
         //Windows form saving status
         private void LoadSizeResolution()
@@ -101,15 +124,34 @@ namespace VCMS
             SaveSizeRosolution();
         }
         #endregion
+        private Form currentChildForm;
         public Main()
         {
             InitializeComponent();
             LoadSizeResolution();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
-        
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            formPanel.Controls.Add(childForm);
+            childForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.BackColor = Color.White;
+            childForm.Show();
+            titleLabel.Text = childForm.Text;
+        }
         private void LogoPicture_Click(object sender, EventArgs e)
         {
             // TODO: Open home form here
+            OpenChildForm(new Home());
         }
         private void CostumersButton_Click(object sender, EventArgs e)
         {
@@ -129,7 +171,5 @@ namespace VCMS
         {
             // TODO: Logout a form in here
         }
-
-
     }
 }
