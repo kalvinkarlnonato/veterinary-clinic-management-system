@@ -35,11 +35,13 @@
             // 
             // reportsList
             // 
+            this.reportsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reportsList.AutoSizeTable = false;
             this.reportsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.reportsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.reportsList.Depth = 0;
-            this.reportsList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.reportsList.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportsList.FullRowSelect = true;
             this.reportsList.HideSelection = false;
@@ -56,7 +58,6 @@
             // 
             // reportsLabel
             // 
-            this.reportsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.reportsLabel.AutoSize = true;
             this.reportsLabel.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportsLabel.Location = new System.Drawing.Point(2, 22);
@@ -76,7 +77,7 @@
             this.reportsComboBox.DropDownHeight = 174;
             this.reportsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.reportsComboBox.DropDownWidth = 121;
-            this.reportsComboBox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.reportsComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.reportsComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.reportsComboBox.FormattingEnabled = true;
             this.reportsComboBox.Hint = "[Select report]";

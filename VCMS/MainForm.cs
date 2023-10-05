@@ -188,6 +188,7 @@ namespace VCMS
         private void reportsButton_Click(object sender, EventArgs e)
         {
             // Todo: Open reports form here
+            OpenChildForm(new ReportsForm());
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
