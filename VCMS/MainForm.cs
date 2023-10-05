@@ -55,9 +55,9 @@ namespace VCMS
                 doctorsButton.Text = doctorsButton.Tag.ToString();
                 servicesButton.Text = servicesButton.Tag.ToString();
                 receptionistButton.Text = receptionistButton.Tag.ToString();
-                logoutButton.Text = logoutButton.Tag.ToString();
-                reservationsButton.Text = reservationsButton.Tag.ToString();
+                schedulesButton.Text = schedulesButton.Tag.ToString();
                 reportsButton.Text = reportsButton.Tag.ToString();
+                logoutButton.Text = logoutButton.Tag.ToString();
                 burgerButton.IconChar = FontAwesome.Sharp.IconChar.EllipsisV;
                 sidePanel.Width = sizePanelSize;
                 logoLabel.Visible = true;
@@ -68,9 +68,9 @@ namespace VCMS
                 doctorsButton.Text = String.Empty;
                 servicesButton.Text = String.Empty;
                 receptionistButton.Text = String.Empty;
-                logoutButton.Text = String.Empty;
-                reservationsButton.Text = String.Empty;
+                schedulesButton.Text = String.Empty;
                 reportsButton.Text = String.Empty;
+                logoutButton.Text = String.Empty;
                 burgerButton.IconChar = FontAwesome.Sharp.IconChar.Bars;
                 sidePanel.Width = burgerButton.Width;
                 logoLabel.Visible = false;
@@ -183,6 +183,7 @@ namespace VCMS
         private void ReceptionistButton_Click(object sender, EventArgs e)
         {
             // TODO: Open receptionist form here
+            OpenChildForm(new ReceptionistForm());
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)

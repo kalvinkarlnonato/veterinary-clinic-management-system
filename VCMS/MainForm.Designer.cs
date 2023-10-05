@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.sidePanel = new System.Windows.Forms.Panel();
             this.reportsButton = new FontAwesome.Sharp.IconButton();
-            this.reservationsButton = new FontAwesome.Sharp.IconButton();
+            this.schedulesButton = new FontAwesome.Sharp.IconButton();
             this.burgerButton = new FontAwesome.Sharp.IconButton();
             this.logoLabel = new System.Windows.Forms.Label();
             this.logoutButton = new FontAwesome.Sharp.IconButton();
@@ -55,7 +55,7 @@
             // 
             this.sidePanel.BackColor = System.Drawing.Color.PowderBlue;
             this.sidePanel.Controls.Add(this.reportsButton);
-            this.sidePanel.Controls.Add(this.reservationsButton);
+            this.sidePanel.Controls.Add(this.schedulesButton);
             this.sidePanel.Controls.Add(this.burgerButton);
             this.sidePanel.Controls.Add(this.logoLabel);
             this.sidePanel.Controls.Add(this.logoutButton);
@@ -93,28 +93,28 @@
             this.reportsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.reportsButton.UseVisualStyleBackColor = true;
             // 
-            // reservationsButton
+            // schedulesButton
             // 
-            this.reservationsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.schedulesButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.reservationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reservationsButton.FlatAppearance.BorderSize = 0;
-            this.reservationsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.reservationsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.reservationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reservationsButton.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.reservationsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.reservationsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.reservationsButton.IconSize = 30;
-            this.reservationsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reservationsButton.Location = new System.Drawing.Point(0, 310);
-            this.reservationsButton.Name = "reservationsButton";
-            this.reservationsButton.Size = new System.Drawing.Size(150, 44);
-            this.reservationsButton.TabIndex = 20;
-            this.reservationsButton.Tag = "Reservations";
-            this.reservationsButton.Text = "Reservations";
-            this.reservationsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.reservationsButton.UseVisualStyleBackColor = true;
+            this.schedulesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.schedulesButton.FlatAppearance.BorderSize = 0;
+            this.schedulesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.schedulesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.schedulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.schedulesButton.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.schedulesButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.schedulesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.schedulesButton.IconSize = 30;
+            this.schedulesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.schedulesButton.Location = new System.Drawing.Point(0, 310);
+            this.schedulesButton.Name = "schedulesButton";
+            this.schedulesButton.Size = new System.Drawing.Size(150, 44);
+            this.schedulesButton.TabIndex = 20;
+            this.schedulesButton.Tag = "Schedules";
+            this.schedulesButton.Text = "Schedules";
+            this.schedulesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.schedulesButton.UseVisualStyleBackColor = true;
             // 
             // burgerButton
             // 
@@ -420,7 +420,7 @@
         private FontAwesome.Sharp.IconButton burgerButton;
         private System.Windows.Forms.Panel formPanel;
         private System.Windows.Forms.Panel buttonsPanel;
-        private FontAwesome.Sharp.IconButton reservationsButton;
+        private FontAwesome.Sharp.IconButton schedulesButton;
         private FontAwesome.Sharp.IconButton reportsButton;
     }
 }
