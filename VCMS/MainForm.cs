@@ -178,6 +178,7 @@ namespace VCMS
         private void ServicesButton_Click(object sender, EventArgs e)
         {
             // TODO: Open services form here
+            OpenChildForm(new ServicesForm());
         }
         private void ReceptionistButton_Click(object sender, EventArgs e)
         {
