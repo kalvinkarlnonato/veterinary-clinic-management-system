@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace VCMS.Forms
 {
-    public partial class CostumersForm : MaterialForm
+    public partial class CustomersForm : MaterialForm
     {
-        public CostumersForm()
+        public CustomersForm()
         {
             InitializeComponent();
 

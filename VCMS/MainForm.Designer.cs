@@ -243,6 +243,7 @@
             this.doctorsButton.Text = "Doctors";
             this.doctorsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.doctorsButton.UseVisualStyleBackColor = true;
+            this.doctorsButton.Click += new System.EventHandler(this.DoctorsButton_Click);
             // 
             // logoPicture
             // 
@@ -252,7 +253,7 @@
             this.logoPicture.Image = ((System.Drawing.Image)(resources.GetObject("logoPicture.Image")));
             this.logoPicture.Location = new System.Drawing.Point(0, 26);
             this.logoPicture.Name = "logoPicture";
-            this.logoPicture.Size = new System.Drawing.Size(150, 39);
+            this.logoPicture.Size = new System.Drawing.Size(150, 90);
             this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPicture.TabIndex = 3;
             this.logoPicture.TabStop = false;
@@ -277,8 +278,8 @@
             this.costumersButton.Name = "costumersButton";
             this.costumersButton.Size = new System.Drawing.Size(150, 44);
             this.costumersButton.TabIndex = 2;
-            this.costumersButton.Tag = "Costumers";
-            this.costumersButton.Text = "Costumers";
+            this.costumersButton.Tag = "Customers";
+            this.costumersButton.Text = "Customers";
             this.costumersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.costumersButton.UseVisualStyleBackColor = true;
             this.costumersButton.Click += new System.EventHandler(this.CostumersButton_Click);
@@ -302,7 +303,7 @@
             this.minimizeButton.IconColor = System.Drawing.Color.Black;
             this.minimizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.minimizeButton.IconSize = 30;
-            this.minimizeButton.Location = new System.Drawing.Point(67, 2);
+            this.minimizeButton.Location = new System.Drawing.Point(4, 2);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(24, 24);
             this.minimizeButton.TabIndex = 18;
@@ -319,7 +320,7 @@
             this.sizeButon.IconColor = System.Drawing.Color.Black;
             this.sizeButon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sizeButon.IconSize = 30;
-            this.sizeButon.Location = new System.Drawing.Point(95, 3);
+            this.sizeButon.Location = new System.Drawing.Point(32, 3);
             this.sizeButon.Name = "sizeButon";
             this.sizeButon.Size = new System.Drawing.Size(24, 24);
             this.sizeButon.TabIndex = 17;
@@ -336,7 +337,7 @@
             this.closeButton.IconColor = System.Drawing.Color.Black;
             this.closeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.closeButton.IconSize = 30;
-            this.closeButton.Location = new System.Drawing.Point(123, 3);
+            this.closeButton.Location = new System.Drawing.Point(60, 3);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(24, 24);
             this.closeButton.TabIndex = 16;
@@ -364,13 +365,13 @@
             this.buttonsPanel.Controls.Add(this.closeButton);
             this.buttonsPanel.Controls.Add(this.sizeButon);
             this.buttonsPanel.Controls.Add(this.minimizeButton);
-            this.buttonsPanel.Location = new System.Drawing.Point(885, 0);
+            this.buttonsPanel.Location = new System.Drawing.Point(948, 0);
             this.buttonsPanel.Name = "buttonsPanel";
-            this.buttonsPanel.Size = new System.Drawing.Size(150, 65);
+            this.buttonsPanel.Size = new System.Drawing.Size(87, 65);
             this.buttonsPanel.TabIndex = 0;
             this.buttonsPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
-            // Main
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -393,7 +394,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Main";
+            this.Name = "MainForm";
+            this.Text = "Veterinary Clinic Management System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();

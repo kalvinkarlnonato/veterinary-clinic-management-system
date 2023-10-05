@@ -168,11 +168,15 @@ namespace VCMS
         private void CostumersButton_Click(object sender, EventArgs e)
         {
             // TODO: Open costumer form here
-            OpenChildForm(new CostumersForm());
+            OpenChildForm(new CustomersForm());
+        }
+        private void DoctorsButton_Click(object sender, EventArgs e)
+        {
+            // TODO: Open doctors form here
+            OpenChildForm(new DoctorsForm());
         }
         private void ServicesButton_Click(object sender, EventArgs e)
         {
-
             // TODO: Open services form here
         }
         private void ReceptionistButton_Click(object sender, EventArgs e)
@@ -184,5 +188,6 @@ namespace VCMS
         {
             // TODO: Logout a form in here
         }
+
     }
 }
