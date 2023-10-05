@@ -185,11 +185,14 @@ namespace VCMS
             // TODO: Open receptionist form here
             OpenChildForm(new ReceptionistForm());
         }
+        private void reportsButton_Click(object sender, EventArgs e)
+        {
+            // Todo: Open reports form here
+        }
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             // TODO: Logout a form in here
         }
-
     }
 }
