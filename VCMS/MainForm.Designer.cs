@@ -1,6 +1,6 @@
 ﻿namespace VCMS
 {
-    partial class Main
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.sidePanel = new System.Windows.Forms.Panel();
             this.reportsButton = new FontAwesome.Sharp.IconButton();
             this.reservationsButton = new FontAwesome.Sharp.IconButton();

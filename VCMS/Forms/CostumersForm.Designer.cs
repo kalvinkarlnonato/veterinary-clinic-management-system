@@ -1,6 +1,6 @@
 ﻿namespace VCMS.Forms
 {
-    partial class Costumers
+    partial class CostumersForm
     {
         /// <summary>
         /// Required designer variable.

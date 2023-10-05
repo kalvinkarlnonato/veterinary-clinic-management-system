@@ -1,6 +1,6 @@
 ﻿namespace VCMS.Forms
 {
-    partial class Home
+    partial class HomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.bannerPictureBox = new System.Windows.Forms.PictureBox();
             this.animalsPanel = new System.Windows.Forms.Panel();
             this.animalsCountLabel = new System.Windows.Forms.Label();

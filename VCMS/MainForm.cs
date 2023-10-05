@@ -12,7 +12,7 @@ using VCMS.Forms;
 
 namespace VCMS
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
 
         #region Others
@@ -153,22 +153,22 @@ namespace VCMS
         }
         #endregion
         private Form currentChildForm;
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
             LoadSizeResolution();
-            OpenChildForm(new Home());
+            OpenChildForm(new HomeForm());
             this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
         private void LogoPicture_Click(object sender, EventArgs e)
         {
             // TODO: Open home form here
-            OpenChildForm(new Home());
+            OpenChildForm(new HomeForm());
         }
         private void CostumersButton_Click(object sender, EventArgs e)
         {
             // TODO: Open costumer form here
-            OpenChildForm(new Costumers());
+            OpenChildForm(new CostumersForm());
         }
         private void ServicesButton_Click(object sender, EventArgs e)
         {

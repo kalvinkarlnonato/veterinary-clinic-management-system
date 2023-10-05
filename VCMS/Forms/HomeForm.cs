@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VCMS.Forms
 {
-    public partial class Home : Form
+    public partial class HomeForm : Form
     {
-        public Home()
+        public HomeForm()
         {
             InitializeComponent();
         }
