@@ -94,5 +94,17 @@ namespace VCMS.Properties {
                 this["GlobalWindowSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool GlobalMenuBar {
+            get {
+                return ((bool)(this["GlobalMenuBar"]));
+            }
+            set {
+                this["GlobalMenuBar"] = value;
+            }
+        }
     }
 }

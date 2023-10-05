@@ -20,5 +20,8 @@
     <Setting Name="GlobalWindowSize" Type="System.Drawing.Size" Scope="User">
       <Value Profile="(Default)">1000, 500</Value>
     </Setting>
+    <Setting Name="GlobalMenuBar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

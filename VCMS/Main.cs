@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VCMS.Library;
-using System.Runtime.InteropServices;
-using System.Drawing.Drawing2D;
 using VCMS.Forms;
 
 namespace VCMS
@@ -49,34 +47,42 @@ namespace VCMS
                 Config.MoveForm(Handle);
             }
         }
-        private void BurgerButton_Click(object sender, EventArgs e)
+        private void ToogleMenu(bool isShow)
         {
-            if (logoLabel.Visible)
-            {
-                costumersButton.Text = String.Empty;
-                doctorsButton.Text = String.Empty;
-                servicesButton.Text = String.Empty;
-                receptionistButton.Text = String.Empty;
-                logoutButton.Text = String.Empty;
-                burgerButton.IconChar = FontAwesome.Sharp.IconChar.Bars;
-                sidePanel.Width = burgerButton.Width;
-                logoLabel.Visible = false;
-            }
-            else
+            if (isShow)
             {
                 costumersButton.Text = costumersButton.Tag.ToString();
                 doctorsButton.Text = doctorsButton.Tag.ToString();
                 servicesButton.Text = servicesButton.Tag.ToString();
                 receptionistButton.Text = receptionistButton.Tag.ToString();
                 logoutButton.Text = logoutButton.Tag.ToString();
+                reservationsButton.Text = reservationsButton.Tag.ToString();
+                reportsButton.Text = reportsButton.Tag.ToString();
                 burgerButton.IconChar = FontAwesome.Sharp.IconChar.EllipsisV;
                 sidePanel.Width = sizePanelSize;
                 logoLabel.Visible = true;
             }
+            else
+            {
+                costumersButton.Text = String.Empty;
+                doctorsButton.Text = String.Empty;
+                servicesButton.Text = String.Empty;
+                receptionistButton.Text = String.Empty;
+                logoutButton.Text = String.Empty;
+                reservationsButton.Text = String.Empty;
+                reportsButton.Text = String.Empty;
+                burgerButton.IconChar = FontAwesome.Sharp.IconChar.Bars;
+                sidePanel.Width = burgerButton.Width;
+                logoLabel.Visible = false;
+            }
             titleLabel.Left = sidePanel.Width;
-            titleLabel.Width = this.Width - (sidePanel.Width+buttonsPanel.Width);
+            titleLabel.Width = this.Width - (sidePanel.Width);
             formPanel.Left = sidePanel.Width;
             formPanel.Width = this.Width - sidePanel.Width;
+        }
+        private void BurgerButton_Click(object sender, EventArgs e)
+        {
+            ToogleMenu(!logoLabel.Visible);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -105,6 +111,8 @@ namespace VCMS
             else this.WindowState = Properties.Settings.Default.GlobalWindowState;
             this.Location = Properties.Settings.Default.GlobalWindowLocation;
             this.Size = Properties.Settings.Default.GlobalWindowSize;
+            ToogleMenu(Properties.Settings.Default.GlobalMenuBar);
+
         }
         private void SaveSizeRosolution()
         {
@@ -119,6 +127,7 @@ namespace VCMS
                 Properties.Settings.Default.GlobalWindowLocation = this.RestoreBounds.Location;
                 Properties.Settings.Default.GlobalWindowSize = this.RestoreBounds.Size;
             }
+            Properties.Settings.Default.GlobalMenuBar = logoLabel.Visible;
             Properties.Settings.Default.Save();
         }
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -148,8 +157,8 @@ namespace VCMS
         {
             InitializeComponent();
             LoadSizeResolution();
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
             OpenChildForm(new Home());
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
         private void LogoPicture_Click(object sender, EventArgs e)
         {

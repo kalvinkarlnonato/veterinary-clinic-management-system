@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.reportsButton = new FontAwesome.Sharp.IconButton();
+            this.reservationsButton = new FontAwesome.Sharp.IconButton();
             this.burgerButton = new FontAwesome.Sharp.IconButton();
             this.logoLabel = new System.Windows.Forms.Label();
             this.logoutButton = new FontAwesome.Sharp.IconButton();
@@ -52,6 +54,8 @@
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.PowderBlue;
+            this.sidePanel.Controls.Add(this.reportsButton);
+            this.sidePanel.Controls.Add(this.reservationsButton);
             this.sidePanel.Controls.Add(this.burgerButton);
             this.sidePanel.Controls.Add(this.logoLabel);
             this.sidePanel.Controls.Add(this.logoutButton);
@@ -63,12 +67,59 @@
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(150, 455);
+            this.sidePanel.Size = new System.Drawing.Size(150, 622);
             this.sidePanel.TabIndex = 1;
+            // 
+            // reportsButton
+            // 
+            this.reportsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reportsButton.FlatAppearance.BorderSize = 0;
+            this.reportsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.reportsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.reportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportsButton.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.reportsButton.IconColor = System.Drawing.Color.Maroon;
+            this.reportsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.reportsButton.IconSize = 30;
+            this.reportsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportsButton.Location = new System.Drawing.Point(0, 357);
+            this.reportsButton.Name = "reportsButton";
+            this.reportsButton.Size = new System.Drawing.Size(150, 44);
+            this.reportsButton.TabIndex = 21;
+            this.reportsButton.Tag = "Reports";
+            this.reportsButton.Text = "Reports";
+            this.reportsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.reportsButton.UseVisualStyleBackColor = true;
+            // 
+            // reservationsButton
+            // 
+            this.reservationsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reservationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reservationsButton.FlatAppearance.BorderSize = 0;
+            this.reservationsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.reservationsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.reservationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reservationsButton.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.reservationsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.reservationsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.reservationsButton.IconSize = 30;
+            this.reservationsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reservationsButton.Location = new System.Drawing.Point(0, 310);
+            this.reservationsButton.Name = "reservationsButton";
+            this.reservationsButton.Size = new System.Drawing.Size(150, 44);
+            this.reservationsButton.TabIndex = 20;
+            this.reservationsButton.Tag = "Reservations";
+            this.reservationsButton.Text = "Reservations";
+            this.reservationsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.reservationsButton.UseVisualStyleBackColor = true;
             // 
             // burgerButton
             // 
             this.burgerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.burgerButton.BackColor = System.Drawing.Color.Teal;
             this.burgerButton.FlatAppearance.BorderSize = 0;
             this.burgerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.burgerButton.IconChar = FontAwesome.Sharp.IconChar.EllipsisVertical;
@@ -79,7 +130,7 @@
             this.burgerButton.Name = "burgerButton";
             this.burgerButton.Size = new System.Drawing.Size(40, 27);
             this.burgerButton.TabIndex = 19;
-            this.burgerButton.UseVisualStyleBackColor = true;
+            this.burgerButton.UseVisualStyleBackColor = false;
             this.burgerButton.Click += new System.EventHandler(this.BurgerButton_Click);
             this.burgerButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
@@ -87,10 +138,11 @@
             // 
             this.logoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoLabel.BackColor = System.Drawing.Color.Teal;
             this.logoLabel.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoLabel.Location = new System.Drawing.Point(0, 0);
             this.logoLabel.Name = "logoLabel";
-            this.logoLabel.Size = new System.Drawing.Size(113, 26);
+            this.logoLabel.Size = new System.Drawing.Size(113, 27);
             this.logoLabel.TabIndex = 15;
             this.logoLabel.Text = "VCMS";
             this.logoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,7 +163,7 @@
             this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.logoutButton.IconSize = 30;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 411);
+            this.logoutButton.Location = new System.Drawing.Point(0, 578);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(150, 44);
             this.logoutButton.TabIndex = 7;
@@ -238,7 +290,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formPanel.Location = new System.Drawing.Point(150, 64);
             this.formPanel.Name = "formPanel";
-            this.formPanel.Size = new System.Drawing.Size(742, 376);
+            this.formPanel.Size = new System.Drawing.Size(885, 543);
             this.formPanel.TabIndex = 19;
             // 
             // minimizeButton
@@ -299,7 +351,7 @@
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.Location = new System.Drawing.Point(150, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(591, 65);
+            this.titleLabel.Size = new System.Drawing.Size(885, 65);
             this.titleLabel.TabIndex = 15;
             this.titleLabel.Text = "SNIFFS AND LICKS CLINIC";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -312,7 +364,7 @@
             this.buttonsPanel.Controls.Add(this.closeButton);
             this.buttonsPanel.Controls.Add(this.sizeButon);
             this.buttonsPanel.Controls.Add(this.minimizeButton);
-            this.buttonsPanel.Location = new System.Drawing.Point(742, 0);
+            this.buttonsPanel.Location = new System.Drawing.Point(885, 0);
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(150, 65);
             this.buttonsPanel.TabIndex = 0;
@@ -323,7 +375,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
-            this.ClientSize = new System.Drawing.Size(892, 455);
+            this.ClientSize = new System.Drawing.Size(1035, 622);
             this.ControlBox = false;
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.formPanel);
@@ -366,6 +418,8 @@
         private FontAwesome.Sharp.IconButton burgerButton;
         private System.Windows.Forms.Panel formPanel;
         private System.Windows.Forms.Panel buttonsPanel;
+        private FontAwesome.Sharp.IconButton reservationsButton;
+        private FontAwesome.Sharp.IconButton reportsButton;
     }
 }
 
