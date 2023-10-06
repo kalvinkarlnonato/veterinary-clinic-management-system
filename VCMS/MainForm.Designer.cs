@@ -67,7 +67,7 @@
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(150, 622);
+            this.sidePanel.Size = new System.Drawing.Size(250, 622);
             this.sidePanel.TabIndex = 1;
             // 
             // reportsButton
@@ -82,17 +82,17 @@
             this.reportsButton.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.reportsButton.IconColor = System.Drawing.Color.Maroon;
             this.reportsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.reportsButton.IconSize = 30;
+            this.reportsButton.IconSize = 40;
             this.reportsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportsButton.Location = new System.Drawing.Point(0, 357);
             this.reportsButton.Name = "reportsButton";
-            this.reportsButton.Size = new System.Drawing.Size(150, 44);
+            this.reportsButton.Size = new System.Drawing.Size(250, 44);
             this.reportsButton.TabIndex = 21;
             this.reportsButton.Tag = "Reports";
             this.reportsButton.Text = "Reports";
             this.reportsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.reportsButton.UseVisualStyleBackColor = true;
-            this.reportsButton.Click += new System.EventHandler(this.reportsButton_Click);
+            this.reportsButton.Click += new System.EventHandler(this.ReportsButton_Click);
             // 
             // schedulesButton
             // 
@@ -106,11 +106,11 @@
             this.schedulesButton.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
             this.schedulesButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.schedulesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.schedulesButton.IconSize = 30;
+            this.schedulesButton.IconSize = 40;
             this.schedulesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.schedulesButton.Location = new System.Drawing.Point(0, 310);
             this.schedulesButton.Name = "schedulesButton";
-            this.schedulesButton.Size = new System.Drawing.Size(150, 44);
+            this.schedulesButton.Size = new System.Drawing.Size(250, 44);
             this.schedulesButton.TabIndex = 20;
             this.schedulesButton.Tag = "Schedules";
             this.schedulesButton.Text = "Schedules";
@@ -127,9 +127,9 @@
             this.burgerButton.IconColor = System.Drawing.Color.Black;
             this.burgerButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.burgerButton.IconSize = 25;
-            this.burgerButton.Location = new System.Drawing.Point(110, 0);
+            this.burgerButton.Location = new System.Drawing.Point(199, 0);
             this.burgerButton.Name = "burgerButton";
-            this.burgerButton.Size = new System.Drawing.Size(40, 27);
+            this.burgerButton.Size = new System.Drawing.Size(50, 27);
             this.burgerButton.TabIndex = 19;
             this.burgerButton.UseVisualStyleBackColor = false;
             this.burgerButton.Click += new System.EventHandler(this.BurgerButton_Click);
@@ -143,7 +143,7 @@
             this.logoLabel.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoLabel.Location = new System.Drawing.Point(0, 0);
             this.logoLabel.Name = "logoLabel";
-            this.logoLabel.Size = new System.Drawing.Size(113, 27);
+            this.logoLabel.Size = new System.Drawing.Size(200, 27);
             this.logoLabel.TabIndex = 15;
             this.logoLabel.Text = "VCMS";
             this.logoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,11 +162,11 @@
             this.logoutButton.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.logoutButton.IconColor = System.Drawing.Color.Red;
             this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.logoutButton.IconSize = 30;
+            this.logoutButton.IconSize = 40;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutButton.Location = new System.Drawing.Point(0, 578);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(150, 44);
+            this.logoutButton.Size = new System.Drawing.Size(250, 44);
             this.logoutButton.TabIndex = 7;
             this.logoutButton.Tag = "Logout";
             this.logoutButton.Text = "Logout";
@@ -186,11 +186,11 @@
             this.receptionistButton.IconChar = FontAwesome.Sharp.IconChar.HospitalUser;
             this.receptionistButton.IconColor = System.Drawing.Color.Magenta;
             this.receptionistButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.receptionistButton.IconSize = 30;
+            this.receptionistButton.IconSize = 40;
             this.receptionistButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.receptionistButton.Location = new System.Drawing.Point(0, 263);
             this.receptionistButton.Name = "receptionistButton";
-            this.receptionistButton.Size = new System.Drawing.Size(150, 44);
+            this.receptionistButton.Size = new System.Drawing.Size(250, 44);
             this.receptionistButton.TabIndex = 6;
             this.receptionistButton.Tag = "Receptionist";
             this.receptionistButton.Text = "Receptionist";
@@ -210,11 +210,11 @@
             this.servicesButton.IconChar = FontAwesome.Sharp.IconChar.ShieldDog;
             this.servicesButton.IconColor = System.Drawing.Color.Green;
             this.servicesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.servicesButton.IconSize = 30;
+            this.servicesButton.IconSize = 40;
             this.servicesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.servicesButton.Location = new System.Drawing.Point(0, 216);
             this.servicesButton.Name = "servicesButton";
-            this.servicesButton.Size = new System.Drawing.Size(150, 44);
+            this.servicesButton.Size = new System.Drawing.Size(250, 44);
             this.servicesButton.TabIndex = 5;
             this.servicesButton.Tag = "Services";
             this.servicesButton.Text = "Services";
@@ -234,11 +234,11 @@
             this.doctorsButton.IconChar = FontAwesome.Sharp.IconChar.UserMd;
             this.doctorsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.doctorsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.doctorsButton.IconSize = 30;
+            this.doctorsButton.IconSize = 40;
             this.doctorsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.doctorsButton.Location = new System.Drawing.Point(0, 169);
             this.doctorsButton.Name = "doctorsButton";
-            this.doctorsButton.Size = new System.Drawing.Size(150, 44);
+            this.doctorsButton.Size = new System.Drawing.Size(250, 44);
             this.doctorsButton.TabIndex = 4;
             this.doctorsButton.Tag = "Doctors";
             this.doctorsButton.Text = "Doctors";
@@ -254,7 +254,7 @@
             this.logoPicture.Image = ((System.Drawing.Image)(resources.GetObject("logoPicture.Image")));
             this.logoPicture.Location = new System.Drawing.Point(0, 26);
             this.logoPicture.Name = "logoPicture";
-            this.logoPicture.Size = new System.Drawing.Size(150, 90);
+            this.logoPicture.Size = new System.Drawing.Size(250, 90);
             this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPicture.TabIndex = 3;
             this.logoPicture.TabStop = false;
@@ -273,14 +273,14 @@
             this.costumersButton.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.costumersButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.costumersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.costumersButton.IconSize = 30;
+            this.costumersButton.IconSize = 40;
             this.costumersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.costumersButton.Location = new System.Drawing.Point(0, 122);
             this.costumersButton.Name = "costumersButton";
-            this.costumersButton.Size = new System.Drawing.Size(150, 44);
+            this.costumersButton.Size = new System.Drawing.Size(250, 44);
             this.costumersButton.TabIndex = 2;
-            this.costumersButton.Tag = "Customers";
-            this.costumersButton.Text = "Customers";
+            this.costumersButton.Tag = "Costumers";
+            this.costumersButton.Text = "Costumers";
             this.costumersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.costumersButton.UseVisualStyleBackColor = true;
             this.costumersButton.Click += new System.EventHandler(this.CostumersButton_Click);
@@ -290,9 +290,9 @@
             this.formPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.formPanel.Location = new System.Drawing.Point(150, 64);
+            this.formPanel.Location = new System.Drawing.Point(250, 65);
             this.formPanel.Name = "formPanel";
-            this.formPanel.Size = new System.Drawing.Size(885, 543);
+            this.formPanel.Size = new System.Drawing.Size(784, 543);
             this.formPanel.TabIndex = 19;
             // 
             // minimizeButton
@@ -351,9 +351,9 @@
             this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(150, 0);
+            this.titleLabel.Location = new System.Drawing.Point(250, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(885, 65);
+            this.titleLabel.Size = new System.Drawing.Size(785, 65);
             this.titleLabel.TabIndex = 15;
             this.titleLabel.Text = "SNIFFS AND LICKS CLINIC";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

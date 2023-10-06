@@ -169,9 +169,9 @@
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReceptionistForm";
-            this.Text = "ReceptionistForm";
+            this.Text = "Receptionist";
             this.containerPanel.ResumeLayout(false);
             this.containerPanel.PerformLayout();
             this.ResumeLayout(false);

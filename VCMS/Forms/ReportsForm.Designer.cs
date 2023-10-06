@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.reportsList = new MaterialSkin.Controls.MaterialListView();
-            this.reportsLabel = new System.Windows.Forms.Label();
             this.reportsComboBox = new MaterialSkin.Controls.MaterialComboBox();
+            this.reportsLabel = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // reportsList
@@ -55,16 +55,6 @@
             this.reportsList.TabIndex = 3;
             this.reportsList.UseCompatibleStateImageBehavior = false;
             this.reportsList.View = System.Windows.Forms.View.Details;
-            // 
-            // reportsLabel
-            // 
-            this.reportsLabel.AutoSize = true;
-            this.reportsLabel.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportsLabel.Location = new System.Drawing.Point(2, 22);
-            this.reportsLabel.Name = "reportsLabel";
-            this.reportsLabel.Size = new System.Drawing.Size(141, 25);
-            this.reportsLabel.TabIndex = 4;
-            this.reportsLabel.Text = "List of reports";
             // 
             // reportsComboBox
             // 
@@ -104,6 +94,18 @@
             this.reportsComboBox.StartIndex = 0;
             this.reportsComboBox.TabIndex = 2;
             // 
+            // reportsLabel
+            // 
+            this.reportsLabel.AutoSize = true;
+            this.reportsLabel.Depth = 0;
+            this.reportsLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.reportsLabel.Location = new System.Drawing.Point(12, 27);
+            this.reportsLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.reportsLabel.Name = "reportsLabel";
+            this.reportsLabel.Size = new System.Drawing.Size(99, 19);
+            this.reportsLabel.TabIndex = 4;
+            this.reportsLabel.Text = "List of reports";
+            // 
             // ReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -111,9 +113,9 @@
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(811, 440);
             this.ControlBox = false;
+            this.Controls.Add(this.reportsLabel);
             this.Controls.Add(this.reportsList);
             this.Controls.Add(this.reportsComboBox);
-            this.Controls.Add(this.reportsLabel);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -122,7 +124,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportsForm";
             this.Padding = new System.Windows.Forms.Padding(0);
-            this.Text = "ReportsForm";
+            this.Text = "Reports";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,7 +132,7 @@
 
         #endregion
         private MaterialSkin.Controls.MaterialListView reportsList;
-        private System.Windows.Forms.Label reportsLabel;
         private MaterialSkin.Controls.MaterialComboBox reportsComboBox;
+        private MaterialSkin.Controls.MaterialLabel reportsLabel;
     }
 }

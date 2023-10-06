@@ -18,7 +18,7 @@ namespace VCMS
         #region Others
         //Fields
         private const int cGrip = 16;
-        private readonly int sizePanelSize = 150;
+        private readonly int sizePanelSize = 250;
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -58,6 +58,7 @@ namespace VCMS
                 schedulesButton.Text = schedulesButton.Tag.ToString();
                 reportsButton.Text = reportsButton.Tag.ToString();
                 logoutButton.Text = logoutButton.Tag.ToString();
+
                 burgerButton.IconChar = FontAwesome.Sharp.IconChar.EllipsisV;
                 sidePanel.Width = sizePanelSize;
                 logoLabel.Visible = true;
@@ -168,32 +169,34 @@ namespace VCMS
         private void CostumersButton_Click(object sender, EventArgs e)
         {
             // TODO: Open costumer form here
-            OpenChildForm(new CustomersForm());
+            if (titleLabel.Text != costumersButton.Text) OpenChildForm(new CustomersForm());
+            
         }
         private void DoctorsButton_Click(object sender, EventArgs e)
         {
             // TODO: Open doctors form here
-            OpenChildForm(new DoctorsForm());
+            if (titleLabel.Text != doctorsButton.Text) OpenChildForm(new DoctorsForm());
         }
         private void ServicesButton_Click(object sender, EventArgs e)
         {
             // TODO: Open services form here
-            OpenChildForm(new ServicesForm());
+            if (titleLabel.Text != servicesButton.Text) OpenChildForm(new ServicesForm());
         }
         private void ReceptionistButton_Click(object sender, EventArgs e)
         {
             // TODO: Open receptionist form here
-            OpenChildForm(new ReceptionistForm());
+            if (titleLabel.Text != receptionistButton.Text) OpenChildForm(new ReceptionistForm());
         }
-        private void reportsButton_Click(object sender, EventArgs e)
+        private void ReportsButton_Click(object sender, EventArgs e)
         {
             // Todo: Open reports form here
-            OpenChildForm(new ReportsForm());
+            if (titleLabel.Text != reportsButton.Text) OpenChildForm(new ReportsForm());
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             // TODO: Logout a form in here
+            Application.Exit();
         }
     }
 }
