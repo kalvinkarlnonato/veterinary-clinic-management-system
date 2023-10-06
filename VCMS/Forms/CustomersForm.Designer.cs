@@ -158,7 +158,7 @@
             this.clientsLabel.TabIndex = 4;
             this.clientsLabel.Text = "Client\'s Informations";
             // 
-            // Costumers
+            // CustomersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,8 +174,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Costumers";
-            this.Text = "Costumers";
+            this.Name = "CustomersForm";
+            this.Text = "Customers";
             this.containerPanel.ResumeLayout(false);
             this.containerPanel.PerformLayout();
             this.ResumeLayout(false);

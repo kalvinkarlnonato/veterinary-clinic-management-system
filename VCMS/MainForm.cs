@@ -51,7 +51,7 @@ namespace VCMS
         {
             if (isShow)
             {
-                costumersButton.Text = costumersButton.Tag.ToString();
+                customersButton.Text = customersButton.Tag.ToString();
                 doctorsButton.Text = doctorsButton.Tag.ToString();
                 servicesButton.Text = servicesButton.Tag.ToString();
                 receptionistButton.Text = receptionistButton.Tag.ToString();
@@ -65,7 +65,7 @@ namespace VCMS
             }
             else
             {
-                costumersButton.Text = String.Empty;
+                customersButton.Text = String.Empty;
                 doctorsButton.Text = String.Empty;
                 servicesButton.Text = String.Empty;
                 receptionistButton.Text = String.Empty;
@@ -166,31 +166,35 @@ namespace VCMS
             // TODO: Open home form here
             OpenChildForm(new HomeForm());
         }
-        private void CostumersButton_Click(object sender, EventArgs e)
+        private void CustomersButton_Click(object sender, EventArgs e)
         {
             // TODO: Open costumer form here
-            if (titleLabel.Text != costumersButton.Text) OpenChildForm(new CustomersForm());
-            
+            if (titleLabel.Text != "Customers") OpenChildForm(new CustomersForm());
         }
         private void DoctorsButton_Click(object sender, EventArgs e)
         {
             // TODO: Open doctors form here
-            if (titleLabel.Text != doctorsButton.Text) OpenChildForm(new DoctorsForm());
+            if (titleLabel.Text != "Doctors") OpenChildForm(new DoctorsForm());
         }
         private void ServicesButton_Click(object sender, EventArgs e)
         {
             // TODO: Open services form here
-            if (titleLabel.Text != servicesButton.Text) OpenChildForm(new ServicesForm());
+            if (titleLabel.Text != "Services") OpenChildForm(new ServicesForm());
         }
         private void ReceptionistButton_Click(object sender, EventArgs e)
         {
             // TODO: Open receptionist form here
-            if (titleLabel.Text != receptionistButton.Text) OpenChildForm(new ReceptionistForm());
+            if (titleLabel.Text != "Receptionist") OpenChildForm(new ReceptionistForm());
+        }
+        private void SchedulesButton_Click(object sender, EventArgs e)
+        {
+            // TODO: Open scheduling form here
+            if (titleLabel.Text != "Schedules") OpenChildForm(new SchedulesForm());
         }
         private void ReportsButton_Click(object sender, EventArgs e)
         {
             // Todo: Open reports form here
-            if (titleLabel.Text != reportsButton.Text) OpenChildForm(new ReportsForm());
+            if (titleLabel.Text != "Reports") OpenChildForm(new ReportsForm());
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
@@ -201,5 +205,6 @@ namespace VCMS
             loginForm.Closed += (s, args) => this.Close();
             loginForm.Show();
         }
+
     }
 }

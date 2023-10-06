@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace VCMS.Forms
 {
-    public partial class SchedulesForm : Form
+    public partial class SchedulesForm : MaterialForm
     {
         public SchedulesForm()
         {

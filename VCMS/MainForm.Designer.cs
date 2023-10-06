@@ -39,7 +39,7 @@
             this.servicesButton = new FontAwesome.Sharp.IconButton();
             this.doctorsButton = new FontAwesome.Sharp.IconButton();
             this.logoPicture = new System.Windows.Forms.PictureBox();
-            this.costumersButton = new FontAwesome.Sharp.IconButton();
+            this.customersButton = new FontAwesome.Sharp.IconButton();
             this.formPanel = new System.Windows.Forms.Panel();
             this.minimizeButton = new FontAwesome.Sharp.IconButton();
             this.sizeButon = new FontAwesome.Sharp.IconButton();
@@ -63,7 +63,7 @@
             this.sidePanel.Controls.Add(this.servicesButton);
             this.sidePanel.Controls.Add(this.doctorsButton);
             this.sidePanel.Controls.Add(this.logoPicture);
-            this.sidePanel.Controls.Add(this.costumersButton);
+            this.sidePanel.Controls.Add(this.customersButton);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
@@ -116,6 +116,7 @@
             this.schedulesButton.Text = "Schedules";
             this.schedulesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.schedulesButton.UseVisualStyleBackColor = true;
+            this.schedulesButton.Click += new System.EventHandler(this.SchedulesButton_Click);
             // 
             // burgerButton
             // 
@@ -261,29 +262,29 @@
             this.logoPicture.Click += new System.EventHandler(this.LogoPicture_Click);
             this.logoPicture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
-            // costumersButton
+            // customersButton
             // 
-            this.costumersButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.customersButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.costumersButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.costumersButton.FlatAppearance.BorderSize = 0;
-            this.costumersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.costumersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.costumersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.costumersButton.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.costumersButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.costumersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.costumersButton.IconSize = 40;
-            this.costumersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.costumersButton.Location = new System.Drawing.Point(0, 122);
-            this.costumersButton.Name = "costumersButton";
-            this.costumersButton.Size = new System.Drawing.Size(250, 44);
-            this.costumersButton.TabIndex = 2;
-            this.costumersButton.Tag = "Costumers";
-            this.costumersButton.Text = "Costumers";
-            this.costumersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.costumersButton.UseVisualStyleBackColor = true;
-            this.costumersButton.Click += new System.EventHandler(this.CostumersButton_Click);
+            this.customersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customersButton.FlatAppearance.BorderSize = 0;
+            this.customersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.customersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.customersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customersButton.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.customersButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.customersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.customersButton.IconSize = 40;
+            this.customersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customersButton.Location = new System.Drawing.Point(0, 122);
+            this.customersButton.Name = "customersButton";
+            this.customersButton.Size = new System.Drawing.Size(250, 44);
+            this.customersButton.TabIndex = 2;
+            this.customersButton.Tag = "Customers";
+            this.customersButton.Text = "Customers";
+            this.customersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.customersButton.UseVisualStyleBackColor = true;
+            this.customersButton.Click += new System.EventHandler(this.CustomersButton_Click);
             // 
             // formPanel
             // 
@@ -407,7 +408,7 @@
 
         #endregion
         private System.Windows.Forms.Panel sidePanel;
-        private FontAwesome.Sharp.IconButton costumersButton;
+        private FontAwesome.Sharp.IconButton customersButton;
         private System.Windows.Forms.PictureBox logoPicture;
         private FontAwesome.Sharp.IconButton logoutButton;
         private FontAwesome.Sharp.IconButton receptionistButton;
