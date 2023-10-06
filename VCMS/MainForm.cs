@@ -196,7 +196,10 @@ namespace VCMS
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             // TODO: Logout a form in here
-            Application.Exit();
+            this.Hide();
+            var loginForm = new LoginForm();
+            loginForm.Closed += (s, args) => this.Close();
+            loginForm.Show();
         }
     }
 }

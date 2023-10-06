@@ -273,7 +273,7 @@
             this.containerPanel.Size = new System.Drawing.Size(943, 316);
             this.containerPanel.TabIndex = 18;
             // 
-            // Home
+            // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -286,8 +286,9 @@
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Home";
+            this.Name = "HomeForm";
             this.Text = "SNIFFS AND LICKS CLINIC";
             ((System.ComponentModel.ISupportInitialize)(this.bannerPictureBox)).EndInit();
             this.animalsPanel.ResumeLayout(false);
