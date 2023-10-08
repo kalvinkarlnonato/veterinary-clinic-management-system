@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VCMS.Forms.Services.Forms;
 
 namespace VCMS.Forms
 {
@@ -15,6 +16,12 @@ namespace VCMS.Forms
         public ServicesForm()
         {
             InitializeComponent();
+        }
+
+        private void MedicationButton_Click(object sender, EventArgs e)
+        {
+            Form medicationForm = new MedicationForm();
+            medicationForm.ShowDialog();
         }
     }
 }

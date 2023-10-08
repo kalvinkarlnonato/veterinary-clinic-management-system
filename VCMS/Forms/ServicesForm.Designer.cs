@@ -50,6 +50,7 @@
             this.medicationButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.medicationButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.medicationButton.UseVisualStyleBackColor = true;
+            this.medicationButton.Click += new System.EventHandler(this.MedicationButton_Click);
             // 
             // containerPanel
             // 
@@ -85,7 +86,7 @@
             // 
             // ServicesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(1048, 579);
