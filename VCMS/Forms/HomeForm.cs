@@ -28,6 +28,7 @@ namespace VCMS.Forms
             if (Properties.Settings.Default.GlobalTheme)
             {
                 SkinThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
+                Properties.Settings.Default.GlobalControlBack = Color.FromArgb(230, 230, 230);
                 Properties.Settings.Default.GlobalBackColor = Color.FromArgb(240, 240, 240);
                 Properties.Settings.Default.GlobalFontColor = Color.FromArgb(64, 64, 64);
                 Properties.Settings.Default.GlobalTheme = false;

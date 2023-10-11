@@ -69,7 +69,7 @@
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(100, 56);
             this.editButton.TabIndex = 2;
-            this.editButton.Text = "Edit (F3)";
+            this.editButton.Text = "Edit (F4)";
             this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.EditButton_Click);
@@ -181,10 +181,10 @@
             this.addPetButton.Name = "addPetButton";
             this.addPetButton.Size = new System.Drawing.Size(100, 56);
             this.addPetButton.TabIndex = 2;
-            this.addPetButton.Text = "Pet (Ctrl+F2)";
+            this.addPetButton.Text = "Pets (F3)";
             this.addPetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addPetButton.UseVisualStyleBackColor = true;
-            this.addPetButton.Click += new System.EventHandler(this.AddButton_Click);
+            this.addPetButton.Click += new System.EventHandler(this.AddPetButton_Click);
             // 
             // searchTextbox
             // 

@@ -13,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
 using VCMS.Library.Models;
+using VCMS.Forms.Customers;
 using MaterialSkin.Controls;
 
 namespace VCMS.Forms
@@ -28,29 +29,29 @@ namespace VCMS.Forms
                 new OwnerModel() { ID = 0, FirstName = "Juan",LastName= "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now ,
                     Pets = new List<PetModel>{
                         new PetModel { ID = 0, Name="Elphi", Breed="Askal", Species="Dog", Birthday = DateTime.Parse("9/1/2023"), ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/29/2023 10:00AM")},
-                        new PetModel { ID = 0, Name="Lukas", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/27/2023 9:00AM")},
-                        new PetModel { ID = 0, Name="Mika", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Female", NextVisit=DateTime.Parse("9/27/2023 9:00AM")}
+                        new PetModel { ID = 1, Name="Lukas", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/27/2023 9:00AM")},
+                        new PetModel { ID = 2, Name="Mika", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Female", NextVisit=DateTime.Parse("9/27/2023 9:00AM")}
                     }
                 },
                 new OwnerModel() { ID = 1, FirstName = "Nathaniel", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
-                        new PetModel { ID = 0, Name="Charlie", Breed="German Shepherd", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/1/2023 9:00AM")} }
+                        new PetModel { ID = 3, Name="Charlie", Breed="German Shepherd", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/1/2023 9:00AM")} }
                 },
                 new OwnerModel() { ID = 2, FirstName = "Jacob", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
-                        new PetModel { ID = 0, Name="Romy", Breed="Siamese cat", Species="Cat", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/2/2023 9:00AM")} }
+                        new PetModel { ID = 4, Name="Romy", Breed="Siamese cat", Species="Cat", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/2/2023 9:00AM")} }
                 },
                 new OwnerModel() { ID = 3, FirstName = "Coquette", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
-                        new PetModel { ID = 0, Name="Kierra", Breed="Holland Lop", Species="Rabbit", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/3/2023 9:00AM")} }
+                        new PetModel { ID = 5, Name="Kierra", Breed="Holland Lop", Species="Rabbit", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/3/2023 9:00AM")} }
                 },
                 new OwnerModel() { ID = 4, FirstName = "Joshua", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
-                        new PetModel { ID = 0, Name="Mickey", Breed="Silkie", Species="Chicken", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/4/2023 9:00AM")} }
+                        new PetModel { ID = 6, Name="Mickey", Breed="Silkie", Species="Chicken", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/4/2023 9:00AM")} }
                 },
                 new OwnerModel() { ID = 5, FirstName = "Angelo", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
-                        new PetModel { ID = 0, Name="Tazzie", Breed="Kunekune", Species="Pig", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/5/2023 9:00AM")} }
+                        new PetModel { ID = 7, Name="Tazzie", Breed="Kunekune", Species="Pig", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/5/2023 9:00AM")} }
                 }
             };
         }
@@ -65,14 +66,12 @@ namespace VCMS.Forms
 
             foreach (var Owner in Owners)
             {
-                var item = new System.Windows.Forms.ListViewItem();
-                item.SubItems[0].Text = Owner.ID.ToString();
+                var item = clientsList.Items.Add(Owner.ID.ToString());
                 item.SubItems.Add(Owner.FullName.ToString());
                 item.SubItems.Add(Owner.PetSpecies.ToString());
                 item.SubItems.Add(Owner.Cellphone.ToString());
                 item.SubItems.Add(Owner.Address.ToString());
                 item.SubItems.Add(Owner.Pets.Last().NextVisit.ToString());
-                clientsList.Items.Add(item);
             }
         }
 
@@ -86,7 +85,7 @@ namespace VCMS.Forms
         {
             if(clientsList.SelectedItems.Count == 0) { return; }
             string message = $"A record about {clientsList.SelectedItems[0].SubItems[1].Text} will all be deleted permanently. Please consider this before clicking yes, We are not responsible of any lose about this record.";
-            System.Windows.MessageBox.Show(message, "Are you sure?",MessageBoxButton.YesNo,MessageBoxImage.Error);
+            System.Windows.MessageBox.Show(message, "Are you sure?",MessageBoxButton.YesNo,MessageBoxImage.Warning);
         }
 
         private void CustomersForm_Load(object sender, EventArgs e)
@@ -96,8 +95,26 @@ namespace VCMS.Forms
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            OwnerModel owner = new OwnerModel();
+            ManageForm form = new ManageForm { owner = owner };
+            form.ShowDialog();
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
             if (clientsList.SelectedItems.Count == 0) { return; }
-            Form form = new Customers.ManageForm();
+            int ownerId = int.Parse(clientsList.SelectedItems[0].Text);
+            OwnerModel owner = Owners.Where(o => o.ID == ownerId).First();
+            ManageForm form = new ManageForm { owner = owner };
+            form.ShowDialog();
+        }
+
+        private void AddPetButton_Click(object sender, EventArgs e)
+        {
+            if (clientsList.SelectedItems.Count == 0) { return; }
+            int ownerId = int.Parse(clientsList.SelectedItems[0].Text);
+            OwnerModel owner = Owners.Where(o => o.ID == ownerId).First();
+            PetsForm form = new PetsForm { owner = owner };
             form.ShowDialog();
         }
 
@@ -107,16 +124,6 @@ namespace VCMS.Forms
             {
                 DeleteButton_Click(sender, e);
             }
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            if (clientsList.SelectedItems.Count == 0) { return; }
-            int idThis = int.Parse(clientsList.SelectedItems[0].Text);
-            OwnerModel owner = Owners.Where(o => o.ID == idThis).First();
-            Customers.ManageForm form = new Customers.ManageForm();
-            form.owner = owner;
-            form.ShowDialog();
         }
     }
 }

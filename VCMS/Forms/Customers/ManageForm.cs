@@ -16,11 +16,10 @@ namespace VCMS.Forms.Customers
     public partial class ManageForm : MaterialForm
     {
         public OwnerModel owner { get; set; }
+        public PetModel pet { get; set; }
         public ManageForm()
         {
             InitializeComponent();
-            birthdayDatepicker.StateCommon.Content.Color1 = Properties.Settings.Default.GlobalFontColor;
-            birthdayDatepicker.StateCommon.Back.Color1 = Properties.Settings.Default.GlobalControlBack;
             
         }
 
@@ -28,22 +27,48 @@ namespace VCMS.Forms.Customers
         {
             sexCombobox.SelectedIndex = -1;
             breedCombobox.SelectedIndex = -1;
+            birthdayDatepicker.StateCommon.Content.Color1 = Properties.Settings.Default.GlobalFontColor;
+            birthdayDatepicker.StateCommon.Back.Color1 = Properties.Settings.Default.GlobalControlBack;
             speciesCombobox.SelectedIndex = -1;
-            if (owner != null) {
-                this.Text = "Edit";
-                firstNameTextbox.Text = owner.FirstName;
-                lastNameTextbox.Text = owner.LastName;
-                contactTextbox.Text = owner.Cellphone;
-                addressTextbox.Text = owner.Address;
-                petNameTextbox.Text = owner.Pets.First().Name;
-                speciesCombobox.SelectedIndex = speciesCombobox.Items.IndexOf(owner.Pets.First().Species);
-                breedCombobox.SelectedIndex = breedCombobox.Items.IndexOf(owner.Pets.First().Breed);
-                birthdayDatepicker.Value = owner.Pets.First().Birthday;
-                colormarkingTextbox.Text = owner.Pets.First().ColorMarking;
-                sexCombobox.SelectedIndex = sexCombobox.Items.IndexOf(owner.Pets.First().Sex);
+            if (owner != null)
+            {
+                if(owner.FirstName == null)
+                {
+                    this.Text = "Add";
+                    clientsInfoPanel.Visible = true;
+                    patientsInfoPanel.Visible = true;
+                    patientsInfoPanel.Top = 286;
+                    this.Height = 555;
+                }
+                else
+                    {
+                    this.Text = "Edit";
+                    firstNameTextbox.Text = owner.FirstName;
+                    lastNameTextbox.Text = owner.LastName;
+                    contactTextbox.Text = owner.Cellphone;
+                    addressTextbox.Text = owner.Address;
+                    clientsInfoPanel.Visible = true;
+                    patientsInfoPanel.Visible = false;
+                    patientsInfoPanel.Top = 286;
+                    this.Height = 360;
+                }
             }
-            else
-                this.Text = "Add";
+            if (pet != null)
+            {
+                if(pet.Name != null)
+                {
+                    petNameTextbox.Text = pet.Name;
+                    speciesCombobox.SelectedIndex = speciesCombobox.Items.IndexOf(pet.Species);
+                    breedCombobox.SelectedIndex = breedCombobox.Items.IndexOf(pet.Breed);
+                    birthdayDatepicker.Value = pet.Birthday;
+                    colormarkingTextbox.Text = pet.ColorMarking;
+                    sexCombobox.SelectedIndex = sexCombobox.Items.IndexOf(pet.Sex);
+                }
+                clientsInfoPanel.Visible = false;
+                patientsInfoPanel.Visible = true;
+                patientsInfoPanel.Top = 67;
+                this.Height = 360;
+            }
             
         }
 
