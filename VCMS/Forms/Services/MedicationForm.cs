@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VCMS.Library;
 
-namespace VCMS.Forms.Services.Forms
+namespace VCMS.Forms.Services
 {
     public partial class MedicationForm : MaterialForm
     {

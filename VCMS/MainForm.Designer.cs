@@ -53,7 +53,7 @@
             // 
             // sidePanel
             // 
-            this.sidePanel.BackColor = System.Drawing.Color.PowderBlue;
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.sidePanel.Controls.Add(this.reportsButton);
             this.sidePanel.Controls.Add(this.schedulesButton);
             this.sidePanel.Controls.Add(this.burgerButton);
@@ -121,7 +121,7 @@
             // burgerButton
             // 
             this.burgerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.burgerButton.BackColor = System.Drawing.Color.Teal;
+            this.burgerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.burgerButton.FlatAppearance.BorderSize = 0;
             this.burgerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.burgerButton.IconChar = FontAwesome.Sharp.IconChar.EllipsisVertical;
@@ -140,7 +140,7 @@
             // 
             this.logoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoLabel.BackColor = System.Drawing.Color.Teal;
+            this.logoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.logoLabel.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoLabel.Location = new System.Drawing.Point(0, 0);
             this.logoLabel.Name = "logoLabel";

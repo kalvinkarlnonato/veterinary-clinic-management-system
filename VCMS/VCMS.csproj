@@ -72,6 +72,12 @@
     <Compile Include="Forms\CustomersForm.Designer.cs">
       <DependentUpon>CustomersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Customers\ManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\ManageForm.Designer.cs">
+      <DependentUpon>ManageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DoctorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,10 +114,10 @@
     <Compile Include="Forms\SchedulesForm.Designer.cs">
       <DependentUpon>SchedulesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Services.Forms\MedicationForm.cs">
+    <Compile Include="Forms\Services\MedicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Services.Forms\MedicationForm.Designer.cs">
+    <Compile Include="Forms\Services\MedicationForm.Designer.cs">
       <DependentUpon>MedicationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServicesForm.cs">
@@ -130,6 +136,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CustomersForm.resx">
       <DependentUpon>CustomersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\ManageForm.resx">
+      <DependentUpon>ManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DoctorsForm.resx">
       <DependentUpon>DoctorsForm.cs</DependentUpon>
@@ -150,7 +159,7 @@
     <EmbeddedResource Include="Forms\SchedulesForm.resx">
       <DependentUpon>SchedulesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Services.Forms\MedicationForm.resx">
+    <EmbeddedResource Include="Forms\Services\MedicationForm.resx">
       <DependentUpon>MedicationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServicesForm.resx">

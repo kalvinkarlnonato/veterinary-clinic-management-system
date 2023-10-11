@@ -1,4 +1,4 @@
-﻿namespace VCMS.Forms.Services.Forms
+﻿namespace VCMS.Forms.Services
 {
     partial class MedicationForm
     {
@@ -52,7 +52,7 @@
             // 
             // customerCombobox
             // 
-            this.customerCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.customerCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.customerCombobox.AutoResize = false;
             this.customerCombobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -78,7 +78,7 @@
             // 
             // petCombobox
             // 
-            this.petCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.petCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.petCombobox.AutoResize = false;
             this.petCombobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -152,7 +152,7 @@
             // 
             // weightTextbox
             // 
-            this.weightTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.weightTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.weightTextbox.AnimateReadOnly = false;
             this.weightTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -173,7 +173,7 @@
             // 
             // temperatureTextbox
             // 
-            this.temperatureTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.temperatureTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.temperatureTextbox.AnimateReadOnly = false;
             this.temperatureTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
