@@ -79,6 +79,7 @@
             this.reportsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.reportsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.reportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.reportsButton.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.reportsButton.IconColor = System.Drawing.Color.Maroon;
             this.reportsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -103,6 +104,7 @@
             this.schedulesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.schedulesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.schedulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.schedulesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.schedulesButton.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
             this.schedulesButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.schedulesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -128,7 +130,7 @@
             this.burgerButton.IconColor = System.Drawing.Color.Black;
             this.burgerButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.burgerButton.IconSize = 25;
-            this.burgerButton.Location = new System.Drawing.Point(199, 0);
+            this.burgerButton.Location = new System.Drawing.Point(200, 0);
             this.burgerButton.Name = "burgerButton";
             this.burgerButton.Size = new System.Drawing.Size(50, 27);
             this.burgerButton.TabIndex = 19;
@@ -160,6 +162,7 @@
             this.logoutButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.logoutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.logoutButton.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.logoutButton.IconColor = System.Drawing.Color.Red;
             this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -184,6 +187,7 @@
             this.receptionistButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.receptionistButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.receptionistButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.receptionistButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.receptionistButton.IconChar = FontAwesome.Sharp.IconChar.HospitalUser;
             this.receptionistButton.IconColor = System.Drawing.Color.Magenta;
             this.receptionistButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -208,6 +212,7 @@
             this.servicesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.servicesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.servicesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.servicesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.servicesButton.IconChar = FontAwesome.Sharp.IconChar.ShieldDog;
             this.servicesButton.IconColor = System.Drawing.Color.Green;
             this.servicesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -232,6 +237,7 @@
             this.doctorsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.doctorsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.doctorsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doctorsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.doctorsButton.IconChar = FontAwesome.Sharp.IconChar.UserMd;
             this.doctorsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.doctorsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -271,6 +277,7 @@
             this.customersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.customersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.customersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customersButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.customersButton.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.customersButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.customersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -291,18 +298,19 @@
             this.formPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.formPanel.Location = new System.Drawing.Point(250, 65);
+            this.formPanel.Location = new System.Drawing.Point(247, 65);
             this.formPanel.Name = "formPanel";
-            this.formPanel.Size = new System.Drawing.Size(784, 543);
+            this.formPanel.Size = new System.Drawing.Size(790, 545);
             this.formPanel.TabIndex = 19;
             // 
             // minimizeButton
             // 
             this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton.DataBindings.Add(new System.Windows.Forms.Binding("IconColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.minimizeButton.IconColor = System.Drawing.Color.Black;
+            this.minimizeButton.IconColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.minimizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.minimizeButton.IconSize = 30;
             this.minimizeButton.Location = new System.Drawing.Point(4, 2);
@@ -316,10 +324,11 @@
             // sizeButon
             // 
             this.sizeButon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sizeButon.DataBindings.Add(new System.Windows.Forms.Binding("IconColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.sizeButon.FlatAppearance.BorderSize = 0;
             this.sizeButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sizeButon.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.sizeButon.IconColor = System.Drawing.Color.Black;
+            this.sizeButon.IconColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.sizeButon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sizeButon.IconSize = 30;
             this.sizeButon.Location = new System.Drawing.Point(32, 3);
@@ -333,10 +342,11 @@
             // closeButton
             // 
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.DataBindings.Add(new System.Windows.Forms.Binding("IconColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.closeButton.FlatAppearance.BorderSize = 0;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeButton.IconChar = FontAwesome.Sharp.IconChar.TimesSquare;
-            this.closeButton.IconColor = System.Drawing.Color.Black;
+            this.closeButton.IconColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.closeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.closeButton.IconSize = 30;
             this.closeButton.Location = new System.Drawing.Point(60, 3);
@@ -345,6 +355,8 @@
             this.closeButton.TabIndex = 16;
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.OnMouseEnterCloseButton);
+            this.closeButton.MouseLeave += new System.EventHandler(this.OnMouseLeaveCloseButton);
             this.closeButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm_MouseMove);
             // 
             // titleLabel
@@ -352,9 +364,9 @@
             this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(250, 0);
+            this.titleLabel.Location = new System.Drawing.Point(247, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(785, 65);
+            this.titleLabel.Size = new System.Drawing.Size(791, 65);
             this.titleLabel.TabIndex = 15;
             this.titleLabel.Text = "SNIFFS AND LICKS CLINIC";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -367,7 +379,7 @@
             this.buttonsPanel.Controls.Add(this.closeButton);
             this.buttonsPanel.Controls.Add(this.sizeButon);
             this.buttonsPanel.Controls.Add(this.minimizeButton);
-            this.buttonsPanel.Location = new System.Drawing.Point(948, 0);
+            this.buttonsPanel.Location = new System.Drawing.Point(951, 0);
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(87, 65);
             this.buttonsPanel.TabIndex = 0;
@@ -387,16 +399,15 @@
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DoubleBuffered = true;
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(100, 70);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "Veterinary Clinic Management System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.sidePanel.ResumeLayout(false);

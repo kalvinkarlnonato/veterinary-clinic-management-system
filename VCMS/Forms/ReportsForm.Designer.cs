@@ -70,7 +70,6 @@
             this.reportsComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.reportsComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.reportsComboBox.FormattingEnabled = true;
-            this.reportsComboBox.Hint = "[Select report]";
             this.reportsComboBox.IntegralHeight = false;
             this.reportsComboBox.ItemHeight = 43;
             this.reportsComboBox.Items.AddRange(new object[] {
@@ -124,6 +123,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportsForm";
             this.Padding = new System.Windows.Forms.Padding(0);
+            this.Sizable = false;
             this.Text = "Reports";
             this.ResumeLayout(false);
             this.PerformLayout();

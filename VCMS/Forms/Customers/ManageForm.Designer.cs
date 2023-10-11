@@ -62,6 +62,7 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -73,6 +74,7 @@
             this.tableLayoutPanel1.Controls.Add(this.materialLabel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.materialLabel4, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.addressTextbox, 1, 3);
+            this.tableLayoutPanel1.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 123);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -242,8 +244,9 @@
             // 
             this.clientLabel.AutoSize = true;
             this.clientLabel.BackColor = System.Drawing.Color.Transparent;
+            this.clientLabel.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.clientLabel.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clientLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.clientLabel.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.clientLabel.Location = new System.Drawing.Point(5, 67);
             this.clientLabel.Name = "clientLabel";
             this.clientLabel.Size = new System.Drawing.Size(334, 56);
@@ -254,8 +257,9 @@
             // 
             this.patientLabel.AutoSize = true;
             this.patientLabel.BackColor = System.Drawing.Color.Transparent;
+            this.patientLabel.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.patientLabel.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.patientLabel.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.patientLabel.Location = new System.Drawing.Point(5, 286);
             this.patientLabel.Name = "patientLabel";
             this.patientLabel.Size = new System.Drawing.Size(354, 56);
@@ -309,6 +313,7 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -325,6 +330,7 @@
             this.tableLayoutPanel2.Controls.Add(this.sexCombobox, 2, 3);
             this.tableLayoutPanel2.Controls.Add(this.speciesCombobox, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.breedCombobox, 2, 1);
+            this.tableLayoutPanel2.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(15, 342);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -432,8 +438,12 @@
             // 
             this.birthdayDatepicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.birthdayDatepicker.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.birthdayDatepicker.CalendarTodayDate = new System.DateTime(2023, 10, 11, 0, 0, 0, 0);
             this.birthdayDatepicker.CustomFormat = "MM/dd/yyyy";
+            this.birthdayDatepicker.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.birthdayDatepicker.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.birthdayDatepicker.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.birthdayDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.birthdayDatepicker.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
             this.birthdayDatepicker.Location = new System.Drawing.Point(3, 103);

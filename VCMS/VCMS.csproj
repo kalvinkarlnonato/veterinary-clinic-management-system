@@ -45,9 +45,6 @@
     <Reference Include="MaterialSkin">
       <HintPath>..\packages\MaterialSkin\MaterialSkin.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -114,11 +111,11 @@
     <Compile Include="Forms\SchedulesForm.Designer.cs">
       <DependentUpon>SchedulesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Services\MedicationForm.cs">
+    <Compile Include="Forms\Services\CheckupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Services\MedicationForm.Designer.cs">
-      <DependentUpon>MedicationForm.cs</DependentUpon>
+    <Compile Include="Forms\Services\CheckupForm.Designer.cs">
+      <DependentUpon>CheckupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServicesForm.cs">
       <SubType>Form</SubType>
@@ -159,8 +156,8 @@
     <EmbeddedResource Include="Forms\SchedulesForm.resx">
       <DependentUpon>SchedulesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Services\MedicationForm.resx">
-      <DependentUpon>MedicationForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Services\CheckupForm.resx">
+      <DependentUpon>CheckupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServicesForm.resx">
       <DependentUpon>ServicesForm.cs</DependentUpon>

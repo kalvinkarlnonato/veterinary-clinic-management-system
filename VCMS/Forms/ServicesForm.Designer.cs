@@ -39,6 +39,7 @@
             // 
             this.medicationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.medicationButton.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.medicationButton.IconChar = FontAwesome.Sharp.IconChar.Syringe;
             this.medicationButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.medicationButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -50,7 +51,6 @@
             this.medicationButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.medicationButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.medicationButton.UseVisualStyleBackColor = true;
-            this.medicationButton.Click += new System.EventHandler(this.MedicationButton_Click);
             // 
             // containerPanel
             // 
@@ -72,6 +72,7 @@
             // 
             this.checkupButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.checkupButton.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkupButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.checkupButton.IconChar = FontAwesome.Sharp.IconChar.Stethoscope;
             this.checkupButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.checkupButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -83,22 +84,24 @@
             this.checkupButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.checkupButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.checkupButton.UseVisualStyleBackColor = true;
+            this.checkupButton.Click += new System.EventHandler(this.CheckupButton_Click);
             // 
             // ServicesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(1048, 579);
+            this.ControlBox = false;
             this.Controls.Add(this.containerPanel);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ServicesForm";
+            this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "Services";
             this.containerPanel.ResumeLayout(false);
             this.ResumeLayout(false);

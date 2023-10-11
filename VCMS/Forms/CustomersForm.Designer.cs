@@ -43,6 +43,7 @@
             // deleteButton
             // 
             this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.deleteButton.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.deleteButton.IconColor = System.Drawing.Color.Black;
             this.deleteButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -59,6 +60,7 @@
             // editButton
             // 
             this.editButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.editButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.editButton.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.editButton.IconColor = System.Drawing.Color.Black;
             this.editButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -75,6 +77,7 @@
             // addButton
             // 
             this.addButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addButton.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.addButton.IconColor = System.Drawing.Color.Black;
             this.addButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -91,6 +94,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.searchButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.searchButton.IconColor = System.Drawing.Color.Black;
             this.searchButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -133,9 +137,10 @@
             // clientsList
             // 
             this.clientsList.AutoSizeTable = false;
-            this.clientsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.clientsList.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.clientsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.containerPanel.SetColumnSpan(this.clientsList, 6);
+            this.clientsList.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.clientsList.Depth = 0;
             this.clientsList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clientsList.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,6 +172,7 @@
             // addPetButton
             // 
             this.addPetButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addPetButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addPetButton.IconChar = FontAwesome.Sharp.IconChar.Paw;
             this.addPetButton.IconColor = System.Drawing.Color.Black;
             this.addPetButton.IconFont = FontAwesome.Sharp.IconFont.Auto;

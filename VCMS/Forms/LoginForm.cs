@@ -1,7 +1,4 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using MaterialSkin;
-using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,19 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VCMS.Library;
+using MaterialSkin;
+using MaterialSkin.Controls;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace VCMS.Forms
 {
     public partial class LoginForm : KryptonForm
     {
-        MaterialSkinManager skinManager { get; set; }
-
+        MaterialSkinManager SkinThemeManager { get; set; }
         public LoginForm()
         {
             InitializeComponent();
-            skinManager = MaterialSkinManager.Instance;
-            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(Primary.Blue600, Primary.Blue900, Primary.Blue900, Accent.Blue400, TextShade.BLACK);
+            SkinThemeManager = MaterialSkinManager.Instance;
+            SkinThemeManager.Theme = Properties.Settings.Default.GlobalTheme ? MaterialSkinManager.Themes.DARK : MaterialSkinManager.Themes.LIGHT;
+            SkinThemeManager.ColorScheme = new MaterialSkin.ColorScheme(Primary.Teal100, Primary.Teal500, Primary.Teal500, Accent.LightBlue700, TextShade.BLACK);
+            this.StateCommon.Border.Color1 = Properties.Settings.Default.GlobalBackColor;
         }
 
         private void MoveForm_MouseMove(object sender, MouseEventArgs e)
@@ -41,14 +41,14 @@ namespace VCMS.Forms
 
         private void OnMouseEnterButton(object sender, EventArgs e)
         {
-            closeButton.IconColor = Color.Red;
+            //closeButton.IconColor = Color.Red;
         }
         private void OnMouseLeaveButton(object sender, EventArgs e)
         {
-            closeButton.IconColor = Color.Black;
+            closeButton.IconColor = Properties.Settings.Default.GlobalFontColor;
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             var mainForm = new MainForm();

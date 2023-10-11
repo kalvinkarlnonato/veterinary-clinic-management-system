@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace VCMS.Forms
 {
-    public partial class DoctorsForm : Form
+    public partial class DoctorsForm : MaterialForm
     {
         public DoctorsForm()
         {

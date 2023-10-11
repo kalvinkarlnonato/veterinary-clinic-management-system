@@ -6,7 +6,7 @@
       <Value Profile="(Default)">64, 64, 64</Value>
     </Setting>
     <Setting Name="GlobalBackColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Control</Value>
+      <Value Profile="(Default)">255, 255, 255</Value>
     </Setting>
     <Setting Name="GlobalFontStyle" Type="System.Drawing.Font" Scope="User">
       <Value Profile="(Default)">Tahoma, 9.75pt</Value>
@@ -22,6 +22,12 @@
     </Setting>
     <Setting Name="GlobalMenuBar" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GlobalTheme" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GlobalControlBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">230, 230, 230</Value>
     </Setting>
   </Settings>
 </SettingsFile>

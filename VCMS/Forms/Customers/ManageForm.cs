@@ -1,6 +1,4 @@
-﻿using MaterialSkin;
-using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,19 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VCMS.Library.Models;
+using MaterialSkin.Controls;
+
 
 namespace VCMS.Forms.Customers
 {
     public partial class ManageForm : MaterialForm
     {
         public OwnerModel owner { get; set; }
-        MaterialSkinManager SkinManager { get; set; }
         public ManageForm()
         {
             InitializeComponent();
-            SkinManager = MaterialSkinManager.Instance;
-            SkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            SkinManager.ColorScheme = new MaterialSkin.ColorScheme(Primary.Teal100, Primary.Teal500, Primary.Teal500, Accent.LightBlue700, TextShade.BLACK);
+            birthdayDatepicker.StateCommon.Content.Color1 = Properties.Settings.Default.GlobalFontColor;
+            birthdayDatepicker.StateCommon.Back.Color1 = Properties.Settings.Default.GlobalControlBack;
+            
         }
 
         private void ManageForm_Load(object sender, EventArgs e)

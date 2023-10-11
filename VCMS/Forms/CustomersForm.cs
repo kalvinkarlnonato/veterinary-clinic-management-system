@@ -1,6 +1,4 @@
-﻿using MaterialSkin;
-using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
 using VCMS.Library.Models;
+using MaterialSkin.Controls;
 
 namespace VCMS.Forms
 {
@@ -22,13 +21,9 @@ namespace VCMS.Forms
     {
 
         private List<OwnerModel> Owners { get; set; }
-        private MaterialSkinManager SkinManager { get; set; }
         public CustomersForm()
         {
             InitializeComponent();
-            SkinManager = MaterialSkinManager.Instance;
-            SkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            SkinManager.ColorScheme = new MaterialSkin.ColorScheme(Primary.Teal100, Primary.Teal500, Primary.Teal500, Accent.LightBlue700, TextShade.BLACK);
             Owners = new List<OwnerModel>() {
                 new OwnerModel() { ID = 0, FirstName = "Juan",LastName= "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now ,
                     Pets = new List<PetModel>{

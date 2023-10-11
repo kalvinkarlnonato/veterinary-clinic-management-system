@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.bannerPictureBox = new System.Windows.Forms.PictureBox();
-            this.animalsPanel = new System.Windows.Forms.Panel();
-            this.animalsCountLabel = new System.Windows.Forms.Label();
-            this.animalsLabel = new System.Windows.Forms.Label();
-            this.animalsPicture = new System.Windows.Forms.PictureBox();
             this.servicesPanel = new System.Windows.Forms.Panel();
             this.servicesCountLabel = new System.Windows.Forms.Label();
             this.servicesLabel = new System.Windows.Forms.Label();
@@ -47,9 +43,8 @@
             this.costumersLabel = new System.Windows.Forms.Label();
             this.costumersPicture = new System.Windows.Forms.PictureBox();
             this.containerPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.darkThemeSwitch = new MaterialSkin.Controls.MaterialSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.bannerPictureBox)).BeginInit();
-            this.animalsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animalsPicture)).BeginInit();
             this.servicesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesPicture)).BeginInit();
             this.doctorsPanel.SuspendLayout();
@@ -71,51 +66,6 @@
             this.bannerPictureBox.TabIndex = 12;
             this.bannerPictureBox.TabStop = false;
             // 
-            // animalsPanel
-            // 
-            this.animalsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.animalsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.animalsPanel.Controls.Add(this.animalsCountLabel);
-            this.animalsPanel.Controls.Add(this.animalsLabel);
-            this.animalsPanel.Controls.Add(this.animalsPicture);
-            this.animalsPanel.Location = new System.Drawing.Point(346, 3);
-            this.animalsPanel.Name = "animalsPanel";
-            this.animalsPanel.Size = new System.Drawing.Size(250, 100);
-            this.animalsPanel.TabIndex = 14;
-            // 
-            // animalsCountLabel
-            // 
-            this.animalsCountLabel.AutoSize = true;
-            this.animalsCountLabel.BackColor = System.Drawing.Color.Transparent;
-            this.animalsCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.animalsCountLabel.ForeColor = System.Drawing.Color.Purple;
-            this.animalsCountLabel.Location = new System.Drawing.Point(75, 42);
-            this.animalsCountLabel.Name = "animalsCountLabel";
-            this.animalsCountLabel.Size = new System.Drawing.Size(30, 24);
-            this.animalsCountLabel.TabIndex = 13;
-            this.animalsCountLabel.Text = "##";
-            // 
-            // animalsLabel
-            // 
-            this.animalsLabel.AutoSize = true;
-            this.animalsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.animalsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.animalsLabel.Location = new System.Drawing.Point(74, 18);
-            this.animalsLabel.Name = "animalsLabel";
-            this.animalsLabel.Size = new System.Drawing.Size(119, 24);
-            this.animalsLabel.TabIndex = 12;
-            this.animalsLabel.Text = "Parvo Patient";
-            // 
-            // animalsPicture
-            // 
-            this.animalsPicture.Image = ((System.Drawing.Image)(resources.GetObject("animalsPicture.Image")));
-            this.animalsPicture.Location = new System.Drawing.Point(8, 18);
-            this.animalsPicture.Name = "animalsPicture";
-            this.animalsPicture.Size = new System.Drawing.Size(60, 60);
-            this.animalsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.animalsPicture.TabIndex = 11;
-            this.animalsPicture.TabStop = false;
-            // 
             // servicesPanel
             // 
             this.servicesPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -123,7 +73,7 @@
             this.servicesPanel.Controls.Add(this.servicesCountLabel);
             this.servicesPanel.Controls.Add(this.servicesLabel);
             this.servicesPanel.Controls.Add(this.servicesPicture);
-            this.servicesPanel.Location = new System.Drawing.Point(602, 109);
+            this.servicesPanel.Location = new System.Drawing.Point(602, 3);
             this.servicesPanel.Name = "servicesPanel";
             this.servicesPanel.Size = new System.Drawing.Size(250, 100);
             this.servicesPanel.TabIndex = 17;
@@ -168,7 +118,7 @@
             this.doctorsPanel.Controls.Add(this.doctorsCountLabel);
             this.doctorsPanel.Controls.Add(this.doctorsLabel);
             this.doctorsPanel.Controls.Add(this.doctorsPicture);
-            this.doctorsPanel.Location = new System.Drawing.Point(346, 109);
+            this.doctorsPanel.Location = new System.Drawing.Point(346, 3);
             this.doctorsPanel.Name = "doctorsPanel";
             this.doctorsPanel.Size = new System.Drawing.Size(250, 100);
             this.doctorsPanel.TabIndex = 16;
@@ -213,7 +163,7 @@
             this.costumersPanel.Controls.Add(this.costumersCountLabel);
             this.costumersPanel.Controls.Add(this.costumersLabel);
             this.costumersPanel.Controls.Add(this.costumersPicture);
-            this.costumersPanel.Location = new System.Drawing.Point(90, 109);
+            this.costumersPanel.Location = new System.Drawing.Point(90, 3);
             this.costumersPanel.Name = "costumersPanel";
             this.costumersPanel.Size = new System.Drawing.Size(250, 100);
             this.costumersPanel.TabIndex = 15;
@@ -259,7 +209,6 @@
             this.containerPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.containerPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.containerPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.containerPanel.Controls.Add(this.animalsPanel, 2, 0);
             this.containerPanel.Controls.Add(this.servicesPanel, 3, 1);
             this.containerPanel.Controls.Add(this.costumersPanel, 1, 1);
             this.containerPanel.Controls.Add(this.doctorsPanel, 2, 1);
@@ -273,27 +222,42 @@
             this.containerPanel.Size = new System.Drawing.Size(943, 316);
             this.containerPanel.TabIndex = 18;
             // 
+            // darkThemeSwitch
+            // 
+            this.darkThemeSwitch.AutoSize = true;
+            this.darkThemeSwitch.Depth = 0;
+            this.darkThemeSwitch.Location = new System.Drawing.Point(0, 0);
+            this.darkThemeSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.darkThemeSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.darkThemeSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.darkThemeSwitch.Name = "darkThemeSwitch";
+            this.darkThemeSwitch.Ripple = true;
+            this.darkThemeSwitch.Size = new System.Drawing.Size(131, 37);
+            this.darkThemeSwitch.TabIndex = 19;
+            this.darkThemeSwitch.Text = "Darkmode";
+            this.darkThemeSwitch.UseVisualStyleBackColor = true;
+            this.darkThemeSwitch.Click += new System.EventHandler(this.DarkThemeSwitch_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(943, 547);
+            this.ControlBox = false;
+            this.Controls.Add(this.darkThemeSwitch);
             this.Controls.Add(this.containerPanel);
             this.Controls.Add(this.bannerPictureBox);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeForm";
+            this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "SNIFFS AND LICKS CLINIC";
             ((System.ComponentModel.ISupportInitialize)(this.bannerPictureBox)).EndInit();
-            this.animalsPanel.ResumeLayout(false);
-            this.animalsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animalsPicture)).EndInit();
             this.servicesPanel.ResumeLayout(false);
             this.servicesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesPicture)).EndInit();
@@ -305,16 +269,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.costumersPicture)).EndInit();
             this.containerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox bannerPictureBox;
-        private System.Windows.Forms.Panel animalsPanel;
-        private System.Windows.Forms.Label animalsCountLabel;
-        private System.Windows.Forms.Label animalsLabel;
-        private System.Windows.Forms.PictureBox animalsPicture;
         private System.Windows.Forms.Panel servicesPanel;
         private System.Windows.Forms.Label servicesCountLabel;
         private System.Windows.Forms.Label servicesLabel;
@@ -328,5 +289,6 @@
         private System.Windows.Forms.Label costumersLabel;
         private System.Windows.Forms.PictureBox costumersPicture;
         private System.Windows.Forms.TableLayoutPanel containerPanel;
+        private MaterialSkin.Controls.MaterialSwitch darkThemeSwitch;
     }
 }

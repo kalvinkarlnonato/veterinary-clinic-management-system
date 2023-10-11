@@ -37,7 +37,7 @@ namespace VCMS.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Control")]
+        [global::System.Configuration.DefaultSettingValueAttribute("255, 255, 255")]
         public global::System.Drawing.Color GlobalBackColor {
             get {
                 return ((global::System.Drawing.Color)(this["GlobalBackColor"]));
@@ -104,6 +104,30 @@ namespace VCMS.Properties {
             }
             set {
                 this["GlobalMenuBar"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GlobalTheme {
+            get {
+                return ((bool)(this["GlobalTheme"]));
+            }
+            set {
+                this["GlobalTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("230, 230, 230")]
+        public global::System.Drawing.Color GlobalControlBack {
+            get {
+                return ((global::System.Drawing.Color)(this["GlobalControlBack"]));
+            }
+            set {
+                this["GlobalControlBack"] = value;
             }
         }
     }

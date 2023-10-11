@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VCMS.Library;
 using VCMS.Forms;
+using MaterialSkin.Controls;
 
 namespace VCMS
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialForm
     {
 
         #region Others
@@ -38,7 +39,7 @@ namespace VCMS
         }
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
         private void MoveForm_MouseMove(object sender, MouseEventArgs e)
         {
@@ -137,10 +138,7 @@ namespace VCMS
         }
         private void OpenChildForm(Form childForm)
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
+            currentChildForm?.Close();
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -151,6 +149,14 @@ namespace VCMS
             childForm.BackColor = Color.White;
             childForm.Show();
             titleLabel.Text = childForm.Text;
+        }
+        private void OnMouseEnterCloseButton(object sender, EventArgs e)
+        {
+            //closeButton.IconColor = Color.Red;
+        }
+        private void OnMouseLeaveCloseButton(object sender, EventArgs e)
+        {
+            closeButton.IconColor = Properties.Settings.Default.GlobalFontColor;
         }
         #endregion
         private Form currentChildForm;

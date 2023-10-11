@@ -77,6 +77,7 @@
             // searchButton
             // 
             this.searchButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.searchButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.searchButton.IconColor = System.Drawing.Color.Black;
             this.searchButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -92,6 +93,7 @@
             // addButton
             // 
             this.addButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addButton.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.addButton.IconColor = System.Drawing.Color.Black;
             this.addButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -107,6 +109,7 @@
             // editButton
             // 
             this.editButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.editButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.editButton.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.editButton.IconColor = System.Drawing.Color.Black;
             this.editButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -122,6 +125,7 @@
             // deleteButton
             // 
             this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.deleteButton.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.deleteButton.IconColor = System.Drawing.Color.Black;
             this.deleteButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -162,15 +166,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(816, 456);
+            this.ControlBox = false;
             this.Controls.Add(this.containerPanel);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReceptionistForm";
+            this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "Receptionist";
             this.containerPanel.ResumeLayout(false);
             this.containerPanel.PerformLayout();

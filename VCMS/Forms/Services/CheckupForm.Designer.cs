@@ -1,6 +1,6 @@
 ﻿namespace VCMS.Forms.Services
 {
-    partial class MedicationForm
+    partial class CheckupForm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@
             // 
             // customerCombobox
             // 
-            this.customerCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.customerCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.customerCombobox.AutoResize = false;
             this.customerCombobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -78,7 +78,7 @@
             // 
             // petCombobox
             // 
-            this.petCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.petCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.petCombobox.AutoResize = false;
             this.petCombobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -152,7 +152,7 @@
             // 
             // weightTextbox
             // 
-            this.weightTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.weightTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.weightTextbox.AnimateReadOnly = false;
             this.weightTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -173,7 +173,7 @@
             // 
             // temperatureTextbox
             // 
-            this.temperatureTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.temperatureTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.temperatureTextbox.AnimateReadOnly = false;
             this.temperatureTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -375,11 +375,14 @@
             this.nextVisitDatetime.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nextVisitDatetime.CustomFormat = "MM/dd/yy hh:mm tt";
             this.nextVisitDatetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.nextVisitDatetime.Location = new System.Drawing.Point(762, 30);
+            this.nextVisitDatetime.Location = new System.Drawing.Point(762, 29);
+            this.nextVisitDatetime.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.nextVisitDatetime.Name = "nextVisitDatetime";
             this.nextVisitDatetime.ShowCheckBox = true;
-            this.nextVisitDatetime.Size = new System.Drawing.Size(375, 35);
-            this.nextVisitDatetime.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextVisitDatetime.Size = new System.Drawing.Size(375, 41);
+            this.nextVisitDatetime.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.nextVisitDatetime.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.nextVisitDatetime.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextVisitDatetime.TabIndex = 5;
             // 
             // submitButton
@@ -404,7 +407,7 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
-            // MedicationForm
+            // CheckupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -419,7 +422,7 @@
             this.Font = global::VCMS.Properties.Settings.Default.GlobalFontStyle;
             this.ForeColor = global::VCMS.Properties.Settings.Default.GlobalFontColor;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MedicationForm";
+            this.Name = "CheckupForm";
             this.Padding = new System.Windows.Forms.Padding(3, 71, 3, 4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medication";

@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace VCMS.Forms
 {
-    public partial class ReceptionistForm : Form
+    public partial class ReceptionistForm : MaterialForm
     {
         public ReceptionistForm()
         {
             InitializeComponent();
-
 
             var receptionists = new[] {
                 new { id = 0, name = "Juan  Dela Cruz",address="Tuguegarao City", phone = "09987654321" },

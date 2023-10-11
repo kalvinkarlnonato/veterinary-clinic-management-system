@@ -8,20 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VCMS.Forms.Services;
+using MaterialSkin.Controls;
 
 namespace VCMS.Forms
 {
-    public partial class ServicesForm : Form
+    public partial class ServicesForm : MaterialForm
     {
         public ServicesForm()
         {
             InitializeComponent();
         }
 
-        private void MedicationButton_Click(object sender, EventArgs e)
+        private void CheckupButton_Click(object sender, EventArgs e)
         {
-            Form medicationForm = new MedicationForm();
-            medicationForm.ShowDialog();
+            CheckupForm checkupForm = new CheckupForm();
+            checkupForm.ShowDialog();
         }
     }
 }
