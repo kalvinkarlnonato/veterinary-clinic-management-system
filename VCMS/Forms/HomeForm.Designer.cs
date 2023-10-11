@@ -219,14 +219,16 @@
             this.containerPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.containerPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.containerPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.containerPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.containerPanel.Size = new System.Drawing.Size(943, 316);
             this.containerPanel.TabIndex = 18;
             // 
             // darkThemeSwitch
             // 
+            this.darkThemeSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.darkThemeSwitch.AutoSize = true;
             this.darkThemeSwitch.Depth = 0;
-            this.darkThemeSwitch.Location = new System.Drawing.Point(0, 0);
+            this.darkThemeSwitch.Location = new System.Drawing.Point(812, 0);
             this.darkThemeSwitch.Margin = new System.Windows.Forms.Padding(0);
             this.darkThemeSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
             this.darkThemeSwitch.MouseState = MaterialSkin.MouseState.HOVER;
@@ -245,8 +247,8 @@
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(943, 547);
             this.ControlBox = false;
-            this.Controls.Add(this.darkThemeSwitch);
             this.Controls.Add(this.containerPanel);
+            this.Controls.Add(this.darkThemeSwitch);
             this.Controls.Add(this.bannerPictureBox);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));

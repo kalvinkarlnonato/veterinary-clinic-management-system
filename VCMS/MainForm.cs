@@ -170,7 +170,7 @@ namespace VCMS
         private void LogoPicture_Click(object sender, EventArgs e)
         {
             // TODO: Open home form here
-            OpenChildForm(new HomeForm());
+            if (titleLabel.Text != "SNIFFS AND LICKS CLINIC") OpenChildForm(new HomeForm());
         }
         private void CustomersButton_Click(object sender, EventArgs e)
         {

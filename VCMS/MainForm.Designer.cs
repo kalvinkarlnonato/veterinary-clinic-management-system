@@ -300,7 +300,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formPanel.Location = new System.Drawing.Point(247, 65);
             this.formPanel.Name = "formPanel";
-            this.formPanel.Size = new System.Drawing.Size(790, 545);
+            this.formPanel.Size = new System.Drawing.Size(790, 542);
             this.formPanel.TabIndex = 19;
             // 
             // minimizeButton
