@@ -26,30 +26,30 @@ namespace VCMS.Forms
         {
             InitializeComponent();
             Owners = new List<OwnerModel>() {
-                new OwnerModel() { ID = 0, FirstName = "Juan",LastName= "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now ,
+                new OwnerModel() { ID = 0, FirstName = "Juan",LastName= "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now ,
                     Pets = new List<PetModel>{
-                        new PetModel { ID = 0, Name="Elphi", Breed="Askal", Species="Dog", Birthday = DateTime.Parse("9/1/2023"), ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/29/2023 10:00AM")},
-                        new PetModel { ID = 1, Name="Lukas", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/27/2023 9:00AM")},
-                        new PetModel { ID = 2, Name="Mika", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Female", NextVisit=DateTime.Parse("9/27/2023 9:00AM")}
+                        new PetModel { ID = 0, Name="Elphi", Breed="Askal", Species="Dog", Birthday = DateTime.Parse("9/1/2023"), ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/9/2023 10:00AM")},
+                        new PetModel { ID = 1, Name="Lukas", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/7/2023 9:00AM")},
+                        new PetModel { ID = 2, Name="Mika", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Female", NextVisit=DateTime.Parse("9/7/2023 9:00AM")}
                     }
                 },
-                new OwnerModel() { ID = 1, FirstName = "Nathaniel", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
+                new OwnerModel() { ID = 1, FirstName = "Nathaniel", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
                         new PetModel { ID = 3, Name="Charlie", Breed="German Shepherd", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/1/2023 9:00AM")} }
                 },
-                new OwnerModel() { ID = 2, FirstName = "Jacob", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
+                new OwnerModel() { ID = 2, FirstName = "Jacob", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
                         new PetModel { ID = 4, Name="Romy", Breed="Siamese cat", Species="Cat", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/2/2023 9:00AM")} }
                 },
-                new OwnerModel() { ID = 3, FirstName = "Coquette", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
+                new OwnerModel() { ID = 3, FirstName = "Coquette", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
                         new PetModel { ID = 5, Name="Kierra", Breed="Holland Lop", Species="Rabbit", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/3/2023 9:00AM")} }
                 },
-                new OwnerModel() { ID = 4, FirstName = "Joshua", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
+                new OwnerModel() { ID = 4, FirstName = "Joshua", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
                         new PetModel { ID = 6, Name="Mickey", Breed="Silkie", Species="Chicken", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/4/2023 9:00AM")} }
                 },
-                new OwnerModel() { ID = 5, FirstName = "Angelo", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "09987654321", DateRegistered = DateTime.Now,
+                new OwnerModel() { ID = 5, FirstName = "Angelo", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
                     Pets = new List<PetModel>{
                         new PetModel { ID = 7, Name="Tazzie", Breed="Kunekune", Species="Pig", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/5/2023 9:00AM")} }
                 }

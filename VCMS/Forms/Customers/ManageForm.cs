@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VCMS.Library.Models;
 using MaterialSkin.Controls;
-
+using VCMS.Library;
 
 namespace VCMS.Forms.Customers
 {
@@ -71,16 +71,19 @@ namespace VCMS.Forms.Customers
             }
             
         }
+        private void ContactTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void ContactTextbox_Leave(object sender, EventArgs e)
+        {
+            contactTextbox.Text = Config.FormatPhoneNumber(contactTextbox.Text);
+        }
 
         private void ContactTextbox_Enter(object sender, EventArgs e)
         {
-            if (contactTextbox.Text.Trim() == String.Empty) contactTextbox.SelectionStart = 0;
-        }
-
-        private void ContactTextbox_Click(object sender, EventArgs e)
-        {
-            if(contactTextbox.Text.Trim() == String.Empty) contactTextbox.SelectionStart = 0;
-
+            contactTextbox.Text = contactTextbox.Text.Replace("-", "");
         }
 
         private void SpeciesCombobox_SelectedIndexChanged(object sender, EventArgs e)

@@ -406,6 +406,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(300, 80);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "Veterinary Clinic Management System";

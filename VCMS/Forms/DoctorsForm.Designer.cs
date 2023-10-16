@@ -35,6 +35,7 @@
             this.deleteButton = new FontAwesome.Sharp.IconButton();
             this.doctorsList = new MaterialSkin.Controls.MaterialListView();
             this.doctorsLabel = new System.Windows.Forms.Label();
+            this.searchTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.containerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             this.searchButton.Text = "Search (F1)";
             this.searchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // addButton
             // 
@@ -94,6 +96,7 @@
             this.addButton.Text = "Add (F2)";
             this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // editButton
             // 
@@ -110,6 +113,7 @@
             this.editButton.Text = "Edit (F3)";
             this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // deleteButton
             // 
@@ -126,6 +130,7 @@
             this.deleteButton.Text = "Delete (DEL)";
             this.deleteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // doctorsList
             // 
@@ -160,6 +165,27 @@
             this.doctorsLabel.TabIndex = 4;
             this.doctorsLabel.Text = "Doctor\'s Informations";
             // 
+            // searchTextbox
+            // 
+            this.searchTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchTextbox.AnimateReadOnly = false;
+            this.searchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchTextbox.Depth = 0;
+            this.searchTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.searchTextbox.Hint = "Search";
+            this.searchTextbox.LeadingIcon = null;
+            this.searchTextbox.Location = new System.Drawing.Point(221, 8);
+            this.searchTextbox.MaxLength = 50;
+            this.searchTextbox.MouseState = MaterialSkin.MouseState.OUT;
+            this.searchTextbox.Multiline = false;
+            this.searchTextbox.Name = "searchTextbox";
+            this.searchTextbox.Size = new System.Drawing.Size(285, 50);
+            this.searchTextbox.TabIndex = 6;
+            this.searchTextbox.Text = "";
+            this.searchTextbox.TrailingIcon = null;
+            this.searchTextbox.Visible = false;
+            // 
             // DoctorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -167,6 +193,7 @@
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(933, 554);
             this.ControlBox = false;
+            this.Controls.Add(this.searchTextbox);
             this.Controls.Add(this.containerPanel);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -192,5 +219,6 @@
         private FontAwesome.Sharp.IconButton deleteButton;
         private MaterialSkin.Controls.MaterialListView doctorsList;
         private System.Windows.Forms.Label doctorsLabel;
+        private MaterialSkin.Controls.MaterialTextBox searchTextbox;
     }
 }

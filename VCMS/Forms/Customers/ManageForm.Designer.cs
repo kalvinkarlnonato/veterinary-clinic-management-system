@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.clientsInfoPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.contactTextbox = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.lastNameTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.firstNameTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -54,6 +53,7 @@
             this.sexCombobox = new MaterialSkin.Controls.MaterialComboBox();
             this.speciesCombobox = new MaterialSkin.Controls.MaterialComboBox();
             this.breedCombobox = new MaterialSkin.Controls.MaterialComboBox();
+            this.contactTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.clientsInfoPanel.SuspendLayout();
             this.patientsInfoPanel.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +66,6 @@
             this.clientsInfoPanel.ColumnCount = 2;
             this.clientsInfoPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.clientsInfoPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.clientsInfoPanel.Controls.Add(this.contactTextbox, 0, 4);
             this.clientsInfoPanel.Controls.Add(this.lastNameTextbox, 1, 2);
             this.clientsInfoPanel.Controls.Add(this.firstNameTextbox, 0, 2);
             this.clientsInfoPanel.Controls.Add(this.materialLabel1, 0, 1);
@@ -75,6 +74,7 @@
             this.clientsInfoPanel.Controls.Add(this.materialLabel3, 0, 3);
             this.clientsInfoPanel.Controls.Add(this.materialLabel4, 1, 3);
             this.clientsInfoPanel.Controls.Add(this.addressTextbox, 1, 4);
+            this.clientsInfoPanel.Controls.Add(this.contactTextbox, 0, 4);
             this.clientsInfoPanel.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.clientsInfoPanel.Location = new System.Drawing.Point(15, 67);
             this.clientsInfoPanel.Name = "clientsInfoPanel";
@@ -86,52 +86,6 @@
             this.clientsInfoPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.clientsInfoPanel.Size = new System.Drawing.Size(937, 213);
             this.clientsInfoPanel.TabIndex = 0;
-            // 
-            // contactTextbox
-            // 
-            this.contactTextbox.AllowPromptAsInput = true;
-            this.contactTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.contactTextbox.AnimateReadOnly = false;
-            this.contactTextbox.AsciiOnly = false;
-            this.contactTextbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.contactTextbox.BeepOnError = false;
-            this.contactTextbox.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.contactTextbox.Depth = 0;
-            this.contactTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.contactTextbox.HidePromptOnLeave = false;
-            this.contactTextbox.HideSelection = true;
-            this.contactTextbox.Hint = "e.g. 09876543210";
-            this.contactTextbox.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.contactTextbox.LeadingIcon = null;
-            this.contactTextbox.Location = new System.Drawing.Point(3, 153);
-            this.contactTextbox.Mask = "00000000000";
-            this.contactTextbox.MaxLength = 32767;
-            this.contactTextbox.MouseState = MaterialSkin.MouseState.OUT;
-            this.contactTextbox.Name = "contactTextbox";
-            this.contactTextbox.PasswordChar = '\0';
-            this.contactTextbox.PrefixSuffixText = null;
-            this.contactTextbox.PromptChar = ' ';
-            this.contactTextbox.ReadOnly = false;
-            this.contactTextbox.RejectInputOnFirstFailure = false;
-            this.contactTextbox.ResetOnPrompt = true;
-            this.contactTextbox.ResetOnSpace = true;
-            this.contactTextbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.contactTextbox.SelectedText = "";
-            this.contactTextbox.SelectionLength = 0;
-            this.contactTextbox.SelectionStart = 0;
-            this.contactTextbox.ShortcutsEnabled = true;
-            this.contactTextbox.Size = new System.Drawing.Size(462, 48);
-            this.contactTextbox.SkipLiterals = true;
-            this.contactTextbox.TabIndex = 4;
-            this.contactTextbox.TabStop = false;
-            this.contactTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.contactTextbox.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.contactTextbox.TrailingIcon = null;
-            this.contactTextbox.UseSystemPasswordChar = false;
-            this.contactTextbox.ValidatingType = null;
-            this.contactTextbox.Click += new System.EventHandler(this.ContactTextbox_Click);
-            this.contactTextbox.Enter += new System.EventHandler(this.ContactTextbox_Enter);
             // 
             // lastNameTextbox
             // 
@@ -454,12 +408,10 @@
             this.birthdayDatepicker.Location = new System.Drawing.Point(3, 159);
             this.birthdayDatepicker.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.birthdayDatepicker.Name = "birthdayDatepicker";
-            this.birthdayDatepicker.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.birthdayDatepicker.Size = new System.Drawing.Size(306, 41);
             this.birthdayDatepicker.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
             this.birthdayDatepicker.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.birthdayDatepicker.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.birthdayDatepicker.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.birthdayDatepicker.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthdayDatepicker.TabIndex = 9;
             // 
@@ -565,6 +517,29 @@
             this.breedCombobox.StartIndex = 0;
             this.breedCombobox.TabIndex = 8;
             // 
+            // contactTextbox
+            // 
+            this.contactTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.contactTextbox.AnimateReadOnly = false;
+            this.contactTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactTextbox.Depth = 0;
+            this.contactTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.contactTextbox.Hint = "e.g. 09876543210";
+            this.contactTextbox.LeadingIcon = null;
+            this.contactTextbox.Location = new System.Drawing.Point(3, 153);
+            this.contactTextbox.MaxLength = 11;
+            this.contactTextbox.MouseState = MaterialSkin.MouseState.OUT;
+            this.contactTextbox.Multiline = false;
+            this.contactTextbox.Name = "contactTextbox";
+            this.contactTextbox.Size = new System.Drawing.Size(462, 50);
+            this.contactTextbox.TabIndex = 4;
+            this.contactTextbox.Text = "";
+            this.contactTextbox.TrailingIcon = null;
+            this.contactTextbox.Enter += new System.EventHandler(this.ContactTextbox_Enter);
+            this.contactTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContactTextbox_KeyPress);
+            this.contactTextbox.Leave += new System.EventHandler(this.ContactTextbox_Leave);
+            // 
             // ManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,7 +587,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker birthdayDatepicker;
         private MaterialSkin.Controls.MaterialTextBox colormarkingTextbox;
         private MaterialSkin.Controls.MaterialComboBox sexCombobox;
-        private MaterialSkin.Controls.MaterialMaskedTextBox contactTextbox;
         private MaterialSkin.Controls.MaterialComboBox breedCombobox;
+        private MaterialSkin.Controls.MaterialTextBox contactTextbox;
     }
 }
