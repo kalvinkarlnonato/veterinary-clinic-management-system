@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using VCMS.Library;
 using VCMS.Forms;
 using MaterialSkin.Controls;
+using VCMS.Forms.Services;
 
 namespace VCMS
 {
@@ -203,6 +204,12 @@ namespace VCMS
             if (titleLabel.Text != "Reports") OpenChildForm(new ReportsForm());
         }
 
+        private void BillingsButton_Click(object sender, EventArgs e)
+        {
+            // Todo: Open billings form here
+            if (titleLabel.Text != "Billings") OpenChildForm(new BillingForm());
+        }
+
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             // TODO: Logout a form in here
@@ -211,6 +218,5 @@ namespace VCMS
             loginForm.Closed += (s, args) => this.Close();
             loginForm.Show();
         }
-
     }
 }

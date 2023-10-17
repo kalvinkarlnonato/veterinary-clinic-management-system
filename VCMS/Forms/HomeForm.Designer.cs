@@ -44,6 +44,7 @@
             this.costumersPicture = new System.Windows.Forms.PictureBox();
             this.containerPanel = new System.Windows.Forms.TableLayoutPanel();
             this.darkThemeSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.aboutButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.bannerPictureBox)).BeginInit();
             this.servicesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesPicture)).BeginInit();
@@ -228,7 +229,7 @@
             this.darkThemeSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.darkThemeSwitch.AutoSize = true;
             this.darkThemeSwitch.Depth = 0;
-            this.darkThemeSwitch.Location = new System.Drawing.Point(812, 0);
+            this.darkThemeSwitch.Location = new System.Drawing.Point(799, 57);
             this.darkThemeSwitch.Margin = new System.Windows.Forms.Padding(0);
             this.darkThemeSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
             this.darkThemeSwitch.MouseState = MaterialSkin.MouseState.HOVER;
@@ -240,6 +241,28 @@
             this.darkThemeSwitch.UseVisualStyleBackColor = true;
             this.darkThemeSwitch.Click += new System.EventHandler(this.DarkThemeSwitch_Click);
             // 
+            // aboutButton
+            // 
+            this.aboutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.aboutButton.AutoSize = false;
+            this.aboutButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.aboutButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.aboutButton.Depth = 0;
+            this.aboutButton.HighEmphasis = true;
+            this.aboutButton.Icon = null;
+            this.aboutButton.Location = new System.Drawing.Point(799, 15);
+            this.aboutButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.aboutButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.aboutButton.Size = new System.Drawing.Size(131, 36);
+            this.aboutButton.TabIndex = 20;
+            this.aboutButton.Text = "About";
+            this.aboutButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.aboutButton.UseAccentColor = false;
+            this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.AboutButton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -247,6 +270,7 @@
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(943, 547);
             this.ControlBox = false;
+            this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.containerPanel);
             this.Controls.Add(this.darkThemeSwitch);
             this.Controls.Add(this.bannerPictureBox);
@@ -292,5 +316,6 @@
         private System.Windows.Forms.PictureBox costumersPicture;
         private System.Windows.Forms.TableLayoutPanel containerPanel;
         private MaterialSkin.Controls.MaterialSwitch darkThemeSwitch;
+        private MaterialSkin.Controls.MaterialButton aboutButton;
     }
 }
