@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.billingsButton = new FontAwesome.Sharp.IconButton();
             this.reportsButton = new FontAwesome.Sharp.IconButton();
             this.schedulesButton = new FontAwesome.Sharp.IconButton();
             this.burgerButton = new FontAwesome.Sharp.IconButton();
@@ -54,6 +55,7 @@
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.sidePanel.Controls.Add(this.billingsButton);
             this.sidePanel.Controls.Add(this.reportsButton);
             this.sidePanel.Controls.Add(this.schedulesButton);
             this.sidePanel.Controls.Add(this.burgerButton);
@@ -67,8 +69,33 @@
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(250, 622);
+            this.sidePanel.Size = new System.Drawing.Size(250, 629);
             this.sidePanel.TabIndex = 1;
+            // 
+            // billingsButton
+            // 
+            this.billingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.billingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.billingsButton.FlatAppearance.BorderSize = 0;
+            this.billingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.billingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.billingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.billingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.billingsButton.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.billingsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.billingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.billingsButton.IconSize = 40;
+            this.billingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.billingsButton.Location = new System.Drawing.Point(0, 357);
+            this.billingsButton.Name = "billingsButton";
+            this.billingsButton.Size = new System.Drawing.Size(250, 44);
+            this.billingsButton.TabIndex = 21;
+            this.billingsButton.Tag = "Bills";
+            this.billingsButton.Text = "Bills";
+            this.billingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.billingsButton.UseVisualStyleBackColor = true;
+            this.billingsButton.Click += new System.EventHandler(this.BillingsButton_Click);
             // 
             // reportsButton
             // 
@@ -85,7 +112,7 @@
             this.reportsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.reportsButton.IconSize = 40;
             this.reportsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportsButton.Location = new System.Drawing.Point(0, 357);
+            this.reportsButton.Location = new System.Drawing.Point(0, 404);
             this.reportsButton.Name = "reportsButton";
             this.reportsButton.Size = new System.Drawing.Size(250, 44);
             this.reportsButton.TabIndex = 21;
@@ -168,7 +195,7 @@
             this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.logoutButton.IconSize = 40;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 578);
+            this.logoutButton.Location = new System.Drawing.Point(0, 585);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(250, 44);
             this.logoutButton.TabIndex = 7;
@@ -298,9 +325,9 @@
             this.formPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.formPanel.Location = new System.Drawing.Point(247, 65);
+            this.formPanel.Location = new System.Drawing.Point(251, 68);
             this.formPanel.Name = "formPanel";
-            this.formPanel.Size = new System.Drawing.Size(790, 542);
+            this.formPanel.Size = new System.Drawing.Size(802, 549);
             this.formPanel.TabIndex = 19;
             // 
             // minimizeButton
@@ -364,9 +391,9 @@
             this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(247, 0);
+            this.titleLabel.Location = new System.Drawing.Point(251, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(791, 65);
+            this.titleLabel.Size = new System.Drawing.Size(802, 65);
             this.titleLabel.TabIndex = 15;
             this.titleLabel.Text = "SNIFFS AND LICKS CLINIC";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,7 +406,7 @@
             this.buttonsPanel.Controls.Add(this.closeButton);
             this.buttonsPanel.Controls.Add(this.sizeButon);
             this.buttonsPanel.Controls.Add(this.minimizeButton);
-            this.buttonsPanel.Location = new System.Drawing.Point(951, 0);
+            this.buttonsPanel.Location = new System.Drawing.Point(966, 1);
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(87, 65);
             this.buttonsPanel.TabIndex = 0;
@@ -390,7 +417,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
-            this.ClientSize = new System.Drawing.Size(1035, 622);
+            this.ClientSize = new System.Drawing.Size(1055, 629);
             this.ControlBox = false;
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.formPanel);
@@ -436,6 +463,7 @@
         private System.Windows.Forms.Panel buttonsPanel;
         private FontAwesome.Sharp.IconButton schedulesButton;
         private FontAwesome.Sharp.IconButton reportsButton;
+        private FontAwesome.Sharp.IconButton billingsButton;
     }
 }
 

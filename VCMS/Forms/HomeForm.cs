@@ -42,5 +42,11 @@ namespace VCMS.Forms
                 Properties.Settings.Default.GlobalTheme = true;
             }
         }
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            AboutForm form = new AboutForm();
+            form.ShowDialog();
+        }
     }
 }
