@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceForm));
+<<<<<<< HEAD
             this.previewBills = new System.Windows.Forms.PrintPreviewDialog();
             this.printBills = new System.Drawing.Printing.PrintDocument();
             this.printBillsPanel = new System.Windows.Forms.Panel();
@@ -45,6 +46,8 @@
             this.ammounts = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+=======
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.payBodyTable = new System.Windows.Forms.TableLayoutPanel();
             this.petHead = new System.Windows.Forms.TableLayoutPanel();
             this.petTitle1 = new System.Windows.Forms.Label();
@@ -77,9 +80,12 @@
             this.petData1 = new System.Windows.Forms.Label();
             this.petData3 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.printBillsPanel.SuspendLayout();
             this.payLTable.SuspendLayout();
             this.payRTable.SuspendLayout();
+=======
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.payBodyTable.SuspendLayout();
             this.petHead.SuspendLayout();
             this.invoicePanel.SuspendLayout();
@@ -87,6 +93,7 @@
             this.petTable.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // previewBills
             // 
             this.previewBills.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -281,6 +288,8 @@
             this.label2.Text = "₱ 300.00";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+=======
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             // payBodyTable
             // 
             this.payBodyTable.AutoSize = true;
@@ -329,8 +338,13 @@
             this.payBodyTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.payBodyTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.payBodyTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+<<<<<<< HEAD
             this.payBodyTable.Size = new System.Drawing.Size(606, 414);
             this.payBodyTable.TabIndex = 6;
+=======
+            this.payBodyTable.Size = new System.Drawing.Size(581, 414);
+            this.payBodyTable.TabIndex = 7;
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             // 
             // petHead
             // 
@@ -351,7 +365,11 @@
             this.petHead.Name = "petHead";
             this.petHead.RowCount = 1;
             this.petHead.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+<<<<<<< HEAD
             this.petHead.Size = new System.Drawing.Size(600, 16);
+=======
+            this.petHead.Size = new System.Drawing.Size(575, 16);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petHead.TabIndex = 10;
             // 
             // petTitle1
@@ -363,7 +381,11 @@
             this.petTitle1.ForeColor = System.Drawing.Color.Gray;
             this.petTitle1.Location = new System.Drawing.Point(3, 0);
             this.petTitle1.Name = "petTitle1";
+<<<<<<< HEAD
             this.petTitle1.Size = new System.Drawing.Size(84, 16);
+=======
+            this.petTitle1.Size = new System.Drawing.Size(80, 16);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petTitle1.TabIndex = 7;
             this.petTitle1.Text = "Pet";
             this.petTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,9 +397,15 @@
             this.petTitle2.AutoSize = true;
             this.petTitle2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petTitle2.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.petTitle2.Location = new System.Drawing.Point(93, 0);
             this.petTitle2.Name = "petTitle2";
             this.petTitle2.Size = new System.Drawing.Size(144, 16);
+=======
+            this.petTitle2.Location = new System.Drawing.Point(89, 0);
+            this.petTitle2.Name = "petTitle2";
+            this.petTitle2.Size = new System.Drawing.Size(137, 16);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petTitle2.TabIndex = 25;
             this.petTitle2.Text = "Complaint/Diagnosis";
             this.petTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -389,9 +417,15 @@
             this.petTitle3.AutoSize = true;
             this.petTitle3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petTitle3.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.petTitle3.Location = new System.Drawing.Point(243, 0);
             this.petTitle3.Name = "petTitle3";
             this.petTitle3.Size = new System.Drawing.Size(144, 16);
+=======
+            this.petTitle3.Location = new System.Drawing.Point(232, 0);
+            this.petTitle3.Name = "petTitle3";
+            this.petTitle3.Size = new System.Drawing.Size(137, 16);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petTitle3.TabIndex = 8;
             this.petTitle3.Text = "Treatment";
             this.petTitle3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -403,9 +437,15 @@
             this.petTitle5.AutoSize = true;
             this.petTitle5.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petTitle5.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.petTitle5.Location = new System.Drawing.Point(513, 0);
             this.petTitle5.Name = "petTitle5";
             this.petTitle5.Size = new System.Drawing.Size(84, 16);
+=======
+            this.petTitle5.Location = new System.Drawing.Point(490, 0);
+            this.petTitle5.Name = "petTitle5";
+            this.petTitle5.Size = new System.Drawing.Size(82, 16);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petTitle5.TabIndex = 10;
             this.petTitle5.Text = "Total";
             this.petTitle5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -417,9 +457,15 @@
             this.petTitle4.AutoSize = true;
             this.petTitle4.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petTitle4.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.petTitle4.Location = new System.Drawing.Point(393, 0);
             this.petTitle4.Name = "petTitle4";
             this.petTitle4.Size = new System.Drawing.Size(114, 16);
+=======
+            this.petTitle4.Location = new System.Drawing.Point(375, 0);
+            this.petTitle4.Name = "petTitle4";
+            this.petTitle4.Size = new System.Drawing.Size(109, 16);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petTitle4.TabIndex = 9;
             this.petTitle4.Text = "Followup";
             this.petTitle4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -437,7 +483,11 @@
             this.invoicePanel.Name = "invoicePanel";
             this.invoicePanel.RowCount = 1;
             this.invoicePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+<<<<<<< HEAD
             this.invoicePanel.Size = new System.Drawing.Size(600, 25);
+=======
+            this.invoicePanel.Size = new System.Drawing.Size(575, 25);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.invoicePanel.TabIndex = 10;
             // 
             // invoicePrice
@@ -445,7 +495,11 @@
             this.invoicePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.invoicePrice.AutoSize = true;
             this.invoicePrice.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.invoicePrice.Location = new System.Drawing.Point(498, 0);
+=======
+            this.invoicePrice.Location = new System.Drawing.Point(473, 0);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.invoicePrice.Name = "invoicePrice";
             this.invoicePrice.Size = new System.Drawing.Size(99, 25);
             this.invoicePrice.TabIndex = 7;
@@ -468,7 +522,11 @@
             this.petSex.AutoSize = true;
             this.petSex.Location = new System.Drawing.Point(3, 325);
             this.petSex.Name = "petSex";
+<<<<<<< HEAD
             this.petSex.Size = new System.Drawing.Size(600, 13);
+=======
+            this.petSex.Size = new System.Drawing.Size(575, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petSex.TabIndex = 21;
             this.petSex.Text = "Sex: Male";
             // 
@@ -478,7 +536,11 @@
             this.div3.ForeColor = System.Drawing.Color.Gray;
             this.div3.Location = new System.Drawing.Point(3, 360);
             this.div3.Name = "div3";
+<<<<<<< HEAD
             this.div3.Size = new System.Drawing.Size(600, 15);
+=======
+            this.div3.Size = new System.Drawing.Size(575, 15);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.div3.TabIndex = 6;
             this.div3.Text = "―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――";
             this.div3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,7 +551,11 @@
             this.petName.AutoSize = true;
             this.petName.Location = new System.Drawing.Point(3, 312);
             this.petName.Name = "petName";
+<<<<<<< HEAD
             this.petName.Size = new System.Drawing.Size(600, 13);
+=======
+            this.petName.Size = new System.Drawing.Size(575, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petName.TabIndex = 20;
             this.petName.Text = "Pet name: Blaki";
             // 
@@ -499,7 +565,11 @@
             this.div2.ForeColor = System.Drawing.Color.Gray;
             this.div2.Location = new System.Drawing.Point(3, 297);
             this.div2.Name = "div2";
+<<<<<<< HEAD
             this.div2.Size = new System.Drawing.Size(600, 15);
+=======
+            this.div2.Size = new System.Drawing.Size(575, 15);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.div2.TabIndex = 23;
             this.div2.Text = "―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――";
             this.div2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -510,7 +580,11 @@
             this.invoiceDate.AutoSize = true;
             this.invoiceDate.Location = new System.Drawing.Point(3, 259);
             this.invoiceDate.Name = "invoiceDate";
+<<<<<<< HEAD
             this.invoiceDate.Size = new System.Drawing.Size(600, 13);
+=======
+            this.invoiceDate.Size = new System.Drawing.Size(575, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.invoiceDate.TabIndex = 5;
             this.invoiceDate.Text = "March 22, 2022 10:25am";
             // 
@@ -521,7 +595,11 @@
             this.petLabel.ForeColor = System.Drawing.Color.Gray;
             this.petLabel.Location = new System.Drawing.Point(3, 272);
             this.petLabel.Name = "petLabel";
+<<<<<<< HEAD
             this.petLabel.Size = new System.Drawing.Size(600, 25);
+=======
+            this.petLabel.Size = new System.Drawing.Size(575, 25);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petLabel.TabIndex = 24;
             this.petLabel.Text = "Patient";
             this.petLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -532,7 +610,11 @@
             this.div1.ForeColor = System.Drawing.Color.Gray;
             this.div1.Location = new System.Drawing.Point(3, 213);
             this.div1.Name = "div1";
+<<<<<<< HEAD
             this.div1.Size = new System.Drawing.Size(600, 15);
+=======
+            this.div1.Size = new System.Drawing.Size(575, 15);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.div1.TabIndex = 2;
             this.div1.Text = "―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――";
             this.div1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -544,7 +626,11 @@
             this.payTitle.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payTitle.Location = new System.Drawing.Point(3, 10);
             this.payTitle.Name = "payTitle";
+<<<<<<< HEAD
             this.payTitle.Size = new System.Drawing.Size(600, 38);
+=======
+            this.payTitle.Size = new System.Drawing.Size(575, 38);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.payTitle.TabIndex = 0;
             this.payTitle.Text = "SNIFFS && LICKS";
             this.payTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -556,7 +642,11 @@
             this.paySubTitle.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paySubTitle.Location = new System.Drawing.Point(3, 48);
             this.paySubTitle.Name = "paySubTitle";
+<<<<<<< HEAD
             this.paySubTitle.Size = new System.Drawing.Size(600, 22);
+=======
+            this.paySubTitle.Size = new System.Drawing.Size(575, 22);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.paySubTitle.TabIndex = 0;
             this.paySubTitle.Text = "VETERINARY CLINIC";
             this.paySubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -568,7 +658,11 @@
             this.payAddressTitle.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payAddressTitle.Location = new System.Drawing.Point(3, 70);
             this.payAddressTitle.Name = "payAddressTitle";
+<<<<<<< HEAD
             this.payAddressTitle.Size = new System.Drawing.Size(600, 32);
+=======
+            this.payAddressTitle.Size = new System.Drawing.Size(575, 32);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.payAddressTitle.TabIndex = 0;
             this.payAddressTitle.Text = "#44 Maxlen Bld. Maharlika Highway,\r\nTanza, Tuguegarao City";
             this.payAddressTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -579,7 +673,11 @@
             this.clientAddress.AutoSize = true;
             this.clientAddress.Location = new System.Drawing.Point(3, 200);
             this.clientAddress.Name = "clientAddress";
+<<<<<<< HEAD
             this.clientAddress.Size = new System.Drawing.Size(600, 13);
+=======
+            this.clientAddress.Size = new System.Drawing.Size(575, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.clientAddress.TabIndex = 0;
             this.clientAddress.Text = "#44 Maxlen Bld. Maharlika Highway, Tanza, Tuguegarao City";
             // 
@@ -589,9 +687,15 @@
             this.clientNum.AutoSize = true;
             this.clientNum.Location = new System.Drawing.Point(3, 187);
             this.clientNum.Name = "clientNum";
+<<<<<<< HEAD
             this.clientNum.Size = new System.Drawing.Size(600, 13);
             this.clientNum.TabIndex = 0;
             this.clientNum.Text = "09987654321";
+=======
+            this.clientNum.Size = new System.Drawing.Size(575, 13);
+            this.clientNum.TabIndex = 0;
+            this.clientNum.Text = "09876543210";
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             // 
             // clientName
             // 
@@ -599,9 +703,15 @@
             this.clientName.AutoSize = true;
             this.clientName.Location = new System.Drawing.Point(3, 174);
             this.clientName.Name = "clientName";
+<<<<<<< HEAD
             this.clientName.Size = new System.Drawing.Size(600, 13);
             this.clientName.TabIndex = 0;
             this.clientName.Text = "Juan A. Dela Cruz";
+=======
+            this.clientName.Size = new System.Drawing.Size(575, 13);
+            this.clientName.TabIndex = 0;
+            this.clientName.Text = "Kalvin Karl C. Nonato";
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             // 
             // clientPic
             // 
@@ -621,7 +731,11 @@
             this.clientLabel.ForeColor = System.Drawing.Color.Gray;
             this.clientLabel.Location = new System.Drawing.Point(3, 102);
             this.clientLabel.Name = "clientLabel";
+<<<<<<< HEAD
             this.clientLabel.Size = new System.Drawing.Size(600, 16);
+=======
+            this.clientLabel.Size = new System.Drawing.Size(575, 16);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.clientLabel.TabIndex = 0;
             this.clientLabel.Text = "Bill to";
             // 
@@ -665,7 +779,11 @@
             this.petTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.petTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.petTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+<<<<<<< HEAD
             this.petTable.Size = new System.Drawing.Size(600, 13);
+=======
+            this.petTable.Size = new System.Drawing.Size(575, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petTable.TabIndex = 10;
             // 
             // petData5
@@ -673,9 +791,15 @@
             this.petData5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.petData5.AutoSize = true;
+<<<<<<< HEAD
             this.petData5.Location = new System.Drawing.Point(513, 0);
             this.petData5.Name = "petData5";
             this.petData5.Size = new System.Drawing.Size(84, 13);
+=======
+            this.petData5.Location = new System.Drawing.Point(490, 0);
+            this.petData5.Name = "petData5";
+            this.petData5.Size = new System.Drawing.Size(82, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petData5.TabIndex = 14;
             this.petData5.Text = "₱ 300.00";
             this.petData5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -685,9 +809,15 @@
             this.petData4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.petData4.AutoSize = true;
+<<<<<<< HEAD
             this.petData4.Location = new System.Drawing.Point(393, 0);
             this.petData4.Name = "petData4";
             this.petData4.Size = new System.Drawing.Size(114, 13);
+=======
+            this.petData4.Location = new System.Drawing.Point(375, 0);
+            this.petData4.Name = "petData4";
+            this.petData4.Size = new System.Drawing.Size(109, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petData4.TabIndex = 13;
             this.petData4.Text = "March 25, 2022";
             // 
@@ -696,9 +826,15 @@
             this.petData2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.petData2.AutoSize = true;
+<<<<<<< HEAD
             this.petData2.Location = new System.Drawing.Point(93, 0);
             this.petData2.Name = "petData2";
             this.petData2.Size = new System.Drawing.Size(144, 13);
+=======
+            this.petData2.Location = new System.Drawing.Point(89, 0);
+            this.petData2.Name = "petData2";
+            this.petData2.Size = new System.Drawing.Size(137, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petData2.TabIndex = 11;
             this.petData2.Text = "Dizzy and gave sugar";
             // 
@@ -709,7 +845,11 @@
             this.petData1.AutoSize = true;
             this.petData1.Location = new System.Drawing.Point(3, 0);
             this.petData1.Name = "petData1";
+<<<<<<< HEAD
             this.petData1.Size = new System.Drawing.Size(84, 13);
+=======
+            this.petData1.Size = new System.Drawing.Size(80, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petData1.TabIndex = 11;
             this.petData1.Text = "Dog(Askal)";
             // 
@@ -718,9 +858,15 @@
             this.petData3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.petData3.AutoSize = true;
+<<<<<<< HEAD
             this.petData3.Location = new System.Drawing.Point(243, 0);
             this.petData3.Name = "petData3";
             this.petData3.Size = new System.Drawing.Size(144, 13);
+=======
+            this.petData3.Location = new System.Drawing.Point(232, 0);
+            this.petData3.Name = "petData3";
+            this.petData3.Size = new System.Drawing.Size(137, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.petData3.TabIndex = 12;
             this.petData3.Text = "Vaccined 3011";
             // 
@@ -731,7 +877,11 @@
             this.label3.ForeColor = System.Drawing.Color.Gray;
             this.label3.Location = new System.Drawing.Point(3, 397);
             this.label3.Name = "label3";
+<<<<<<< HEAD
             this.label3.Size = new System.Drawing.Size(600, 13);
+=======
+            this.label3.Size = new System.Drawing.Size(575, 13);
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.label3.TabIndex = 6;
             this.label3.Text = "―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -740,6 +890,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(606, 815);
             this.Controls.Add(this.printBillsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -752,6 +903,12 @@
             this.payLTable.PerformLayout();
             this.payRTable.ResumeLayout(false);
             this.payRTable.PerformLayout();
+=======
+            this.ClientSize = new System.Drawing.Size(581, 659);
+            this.Controls.Add(this.payBodyTable);
+            this.Name = "InvoiceForm";
+            this.Text = "InvoiceForm";
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
             this.payBodyTable.ResumeLayout(false);
             this.payBodyTable.PerformLayout();
             this.petHead.ResumeLayout(false);
@@ -762,10 +919,15 @@
             this.petTable.ResumeLayout(false);
             this.petTable.PerformLayout();
             this.ResumeLayout(false);
+<<<<<<< HEAD
+=======
+            this.PerformLayout();
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
 
         }
 
         #endregion
+<<<<<<< HEAD
         private System.Windows.Forms.PrintPreviewDialog previewBills;
         private System.Drawing.Printing.PrintDocument printBills;
         private System.Windows.Forms.Panel printBillsPanel;
@@ -782,6 +944,9 @@
         private System.Windows.Forms.Label ammounts;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+=======
+
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
         private System.Windows.Forms.TableLayoutPanel payBodyTable;
         private System.Windows.Forms.TableLayoutPanel petHead;
         private System.Windows.Forms.Label petTitle1;

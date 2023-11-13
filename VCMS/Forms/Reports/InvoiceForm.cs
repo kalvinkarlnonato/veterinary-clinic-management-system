@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+<<<<<<< HEAD
 using System.Drawing.Printing;
+=======
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +20,7 @@ namespace VCMS.Forms.Reports
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
         private void PrintPanel(Panel panel)
         {
             //PrinterSettings printerSettings = new PrinterSettings();
@@ -33,5 +37,7 @@ namespace VCMS.Forms.Reports
         {
 
         }
+=======
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
     }
 }

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+﻿using MaterialSkin.Controls;
+using System;
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +12,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using VCMS.Forms.Bills;
 using VCMS.Library.Models;
 using MaterialSkin.Controls;
+=======
+using VCMS.Library.Models;
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
 
 namespace VCMS.Forms.Services
 {
@@ -25,7 +34,11 @@ namespace VCMS.Forms.Services
                         new PetModel { ID = 0, Name="Elphi", Breed="Askal", Species="Dog", Birthday = DateTime.Parse("9/1/2023"), ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/9/2023 10:00AM"),
                             Checkups = new List<CheckupModel>(){
                                 new CheckupModel { ID=0,PetID = 0,
+<<<<<<< HEAD
                                     Bill=new BillModel(){ ID=0,ServiceID=0,InvoiceNumber=0001,TotalAmount=300,PaidAmount=0,Date=DateTime.Now.Date}
+=======
+                                    Bill=new BillModel(){ ID=0,ServiceID=0,InvoiceNumber=0001,TotalAmount=100,PaidAmount=0,Date=DateTime.Now.Date}
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
                                 }
                             }
                         }
@@ -53,6 +66,7 @@ namespace VCMS.Forms.Services
                 item.SubItems.Add(Owner.Pets.Last().Checkups.Last().Bill.TotalAmount.ToString());
             }
         }
+<<<<<<< HEAD
 
         private void PaymentButton_Click(object sender, EventArgs e)
         {
@@ -62,5 +76,7 @@ namespace VCMS.Forms.Services
             form.Bill = Owners.Where(o => o.FullName == fn).First().Pets.Last().Checkups.Last().Bill;
             form.ShowDialog();
         }
+=======
+>>>>>>> b4311dad8232edc7f9e95a451515e1e6447ec258
     }
 }
