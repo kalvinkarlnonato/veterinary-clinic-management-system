@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VCMS.Forms.Bills;
+using VCMS.Library.Models;
+using MaterialSkin.Controls;
 using VCMS.Library.Models;
 
 namespace VCMS.Forms.Services
@@ -24,7 +27,7 @@ namespace VCMS.Forms.Services
                         new PetModel { ID = 0, Name="Elphi", Breed="Askal", Species="Dog", Birthday = DateTime.Parse("9/1/2023"), ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/9/2023 10:00AM"),
                             Checkups = new List<CheckupModel>(){
                                 new CheckupModel { ID=0,PetID = 0,
-                                    Bill=new BillModel(){ ID=0,ServiceID=0,InvoiceNumber=0001,TotalAmount=100,PaidAmount=0,Date=DateTime.Now.Date}
+                                    Bill=new BillModel(){ ID=0,ServiceID=0,InvoiceNumber=0001,TotalAmount=300,PaidAmount=0,Date=DateTime.Now.Date}
                                 }
                             }
                         }
@@ -51,6 +54,14 @@ namespace VCMS.Forms.Services
                 item.SubItems.Add(Owner.Address.ToString());
                 item.SubItems.Add(Owner.Pets.Last().Checkups.Last().Bill.TotalAmount.ToString());
             }
+        }
+        private void PaymentButton_Click(object sender, EventArgs e)
+        {
+            if (billsList.SelectedItems.Count == 0) return;
+            string fn = billsList.SelectedItems[0].SubItems[1].Text;
+            PaymentForm form = new PaymentForm();
+            form.Bill = Owners.Where(o => o.FullName == fn).First().Pets.Last().Checkups.Last().Bill;
+            form.ShowDialog();
         }
     }
 }

@@ -58,9 +58,9 @@ namespace VCMS
                 servicesButton.Text = servicesButton.Tag.ToString();
                 receptionistButton.Text = receptionistButton.Tag.ToString();
                 schedulesButton.Text = schedulesButton.Tag.ToString();
+                billingsButton.Text = billingsButton.Tag.ToString();
                 reportsButton.Text = reportsButton.Tag.ToString();
                 logoutButton.Text = logoutButton.Tag.ToString();
-
                 burgerButton.IconChar = FontAwesome.Sharp.IconChar.EllipsisV;
                 sidePanel.Width = sizePanelSize;
                 logoLabel.Visible = true;
@@ -72,6 +72,7 @@ namespace VCMS
                 servicesButton.Text = String.Empty;
                 receptionistButton.Text = String.Empty;
                 schedulesButton.Text = String.Empty;
+                billingsButton.Text = String.Empty;
                 reportsButton.Text = String.Empty;
                 logoutButton.Text = String.Empty;
                 burgerButton.IconChar = FontAwesome.Sharp.IconChar.Bars;

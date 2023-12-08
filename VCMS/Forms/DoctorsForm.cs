@@ -16,7 +16,7 @@ namespace VCMS.Forms
 {
     public partial class DoctorsForm : MaterialForm
     {
-        private List<DoctorModel> Doctors = new List<DoctorModel>();
+        private List<DoctorModel> Doctors { get; set; }
         public DoctorsForm()
         {
             InitializeComponent();

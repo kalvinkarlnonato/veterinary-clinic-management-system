@@ -529,6 +529,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 659);
             this.Controls.Add(this.payBodyTable);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "InvoiceForm";
             this.Text = "InvoiceForm";
             this.payBodyTable.ResumeLayout(false);
