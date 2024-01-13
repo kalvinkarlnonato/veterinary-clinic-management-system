@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using VCMS.Forms.Libraries;
+using VCMS.Library;
 
 namespace VCMS.Forms
 {
@@ -21,6 +23,7 @@ namespace VCMS.Forms
             InitializeComponent();
             SkinThemeManager = MaterialSkinManager.Instance;
             darkThemeSwitch.Checked = Properties.Settings.Default.GlobalTheme;
+            label1.Text += "\n"+Config.CurrentUser.Name;
         }
 
         private void DarkThemeSwitch_Click(object sender, EventArgs e)
@@ -46,6 +49,12 @@ namespace VCMS.Forms
         private void AboutButton_Click(object sender, EventArgs e)
         {
             AboutForm form = new AboutForm();
+            form.ShowDialog();
+        }
+
+        private void LibrariesButton_Click(object sender, EventArgs e)
+        {
+            LibrariesForm form = new LibrariesForm();
             form.ShowDialog();
         }
     }

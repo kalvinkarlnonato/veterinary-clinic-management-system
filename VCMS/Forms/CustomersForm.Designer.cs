@@ -206,6 +206,7 @@
             this.searchTextbox.Text = "";
             this.searchTextbox.TrailingIcon = null;
             this.searchTextbox.Visible = false;
+            this.searchTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextbox_KeyDown);
             // 
             // CustomersForm
             // 

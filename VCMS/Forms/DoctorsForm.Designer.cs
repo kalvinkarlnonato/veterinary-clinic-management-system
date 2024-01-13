@@ -185,6 +185,7 @@
             this.searchTextbox.Text = "";
             this.searchTextbox.TrailingIcon = null;
             this.searchTextbox.Visible = false;
+            this.searchTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextbox_KeyDown);
             // 
             // DoctorsForm
             // 
@@ -204,6 +205,7 @@
             this.Name = "DoctorsForm";
             this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "Doctors";
+            this.Load += new System.EventHandler(this.DoctorsForm_Load);
             this.containerPanel.ResumeLayout(false);
             this.containerPanel.PerformLayout();
             this.ResumeLayout(false);

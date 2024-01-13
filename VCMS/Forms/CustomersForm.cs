@@ -25,53 +25,32 @@ namespace VCMS.Forms
         public CustomersForm()
         {
             InitializeComponent();
-            Owners = new List<OwnerModel>() {
-                new OwnerModel() { ID = 0, FirstName = "Juan",LastName= "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now ,
-                    Pets = new List<PetModel>{
-                        new PetModel { ID = 0, Name="Elphi", Breed="Askal", Species="Dog", Birthday = DateTime.Parse("9/1/2023"), ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/9/2023 10:00AM")},
-                        new PetModel { ID = 1, Name="Lukas", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("9/7/2023 9:00AM")},
-                        new PetModel { ID = 2, Name="Mika", Breed="Askal", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Female", NextVisit=DateTime.Parse("9/7/2023 9:00AM")}
-                    }
-                },
-                new OwnerModel() { ID = 1, FirstName = "Nathaniel", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
-                    Pets = new List<PetModel>{
-                        new PetModel { ID = 3, Name="Charlie", Breed="German Shepherd", Species="Dog", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/1/2023 9:00AM")} }
-                },
-                new OwnerModel() { ID = 2, FirstName = "Jacob", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
-                    Pets = new List<PetModel>{
-                        new PetModel { ID = 4, Name="Romy", Breed="Siamese cat", Species="Cat", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/2/2023 9:00AM")} }
-                },
-                new OwnerModel() { ID = 3, FirstName = "Coquette", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
-                    Pets = new List<PetModel>{
-                        new PetModel { ID = 5, Name="Kierra", Breed="Holland Lop", Species="Rabbit", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/3/2023 9:00AM")} }
-                },
-                new OwnerModel() { ID = 4, FirstName = "Joshua", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
-                    Pets = new List<PetModel>{
-                        new PetModel { ID = 6, Name="Mickey", Breed="Silkie", Species="Chicken", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/4/2023 9:00AM")} }
-                },
-                new OwnerModel() { ID = 5, FirstName = "Angelo", LastName = "Dela Cruz", Address = "Tuguegarao City", Cellphone = "0998-765-4321", DateRegistered = DateTime.Now,
-                    Pets = new List<PetModel>{
-                        new PetModel { ID = 7, Name="Tazzie", Breed="Kunekune", Species="Pig", Birthday = DateTime.Now, ColorMarking="Black White", Sex="Male", NextVisit=DateTime.Parse("10/5/2023 9:00AM")} }
-                }
-            };
+            clientsList.Columns.Add("ID", 80);
+            clientsList.Columns.Add("Owner", 350);
+            clientsList.Columns.Add("Pet(s)", 250);
+            clientsList.Columns.Add("Phone No.", 200);
+            clientsList.Columns.Add("Address", 400);
+            clientsList.Columns.Add("Registered Date", 400);
+            clientsList.Columns.Add("Next Visit", 200);
         }
         private void LoadCustomerView()
         {
-            clientsList.Columns.Add("ID", 80);
-            clientsList.Columns.Add("Owner", 350);
-            clientsList.Columns.Add("Pet", 250);
-            clientsList.Columns.Add("Phone No.", 200);
-            clientsList.Columns.Add("Address", 400);
-            clientsList.Columns.Add("Next Visit", 200);
+            clientsList.Items.Clear();
 
+            Library.Controller.Clients clients = new Library.Controller.Clients();
+            Owners = clients.AllClients();
+
+            Library.Controller.Pets pets = new Library.Controller.Pets();
             foreach (var Owner in Owners)
             {
                 var item = clientsList.Items.Add(Owner.ID.ToString());
                 item.SubItems.Add(Owner.FullName.ToString());
-                item.SubItems.Add(Owner.PetSpecies.ToString());
+                List<string> petNames = pets.FindPetsByClientID(Owner.ID).Select(p => p.PetName).ToList();
+                string cPetNames = String.Join(",",petNames);
+                item.SubItems.Add(cPetNames);
                 item.SubItems.Add(Owner.Cellphone.ToString());
                 item.SubItems.Add(Owner.Address.ToString());
-                item.SubItems.Add(Owner.Pets.Last().NextVisit.ToString());
+                item.SubItems.Add(Owner.DateRegistered.ToString());
             }
         }
 
@@ -83,9 +62,14 @@ namespace VCMS.Forms
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if(clientsList.SelectedItems.Count == 0) { return; }
+            if(clientsList.SelectedItems.Count == 0) return;
             string message = $"A record about {clientsList.SelectedItems[0].SubItems[1].Text} will all be deleted permanently. Please consider this before clicking yes, We are not responsible of any lose about this record.";
-            System.Windows.MessageBox.Show(message, "Are you sure?",MessageBoxButton.YesNo,MessageBoxImage.Warning);
+            MessageBoxResult x= System.Windows.MessageBox.Show(message, "Are you sure?",MessageBoxButton.YesNo,MessageBoxImage.Warning);
+            if(x == MessageBoxResult.No) return;
+            Library.Controller.Clients clients = new Library.Controller.Clients();
+            int thisid = Convert.ToInt32(clientsList.SelectedItems[0].SubItems[0].Text);
+            clients.Delete(thisid);
+            LoadCustomerView();
         }
 
         private void CustomersForm_Load(object sender, EventArgs e)
@@ -98,6 +82,7 @@ namespace VCMS.Forms
             OwnerModel owner = new OwnerModel();
             ManageForm form = new ManageForm { owner = owner };
             form.ShowDialog();
+            LoadCustomerView();
         }
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -107,6 +92,7 @@ namespace VCMS.Forms
             OwnerModel owner = Owners.Where(o => o.ID == ownerId).First();
             ManageForm form = new ManageForm { owner = owner };
             form.ShowDialog();
+            LoadCustomerView();
         }
 
         private void AddPetButton_Click(object sender, EventArgs e)
@@ -116,6 +102,7 @@ namespace VCMS.Forms
             OwnerModel owner = Owners.Where(o => o.ID == ownerId).First();
             PetsForm form = new PetsForm { owner = owner };
             form.ShowDialog();
+            LoadCustomerView();
         }
 
         private void ClientsList_KeyDown(object sender, KeyEventArgs e)
@@ -123,6 +110,53 @@ namespace VCMS.Forms
             if(e.KeyCode == Keys.Delete)
             {
                 DeleteButton_Click(sender, e);
+            }
+            if(e.KeyCode == Keys.F1)
+            {
+                SearchButton_Click(sender, e);
+            }
+            if(e.KeyCode == Keys.F2)
+            {
+                AddButton_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                AddPetButton_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F4)
+            {
+                EditButton_Click(sender, e);
+            }
+        }
+
+        private void SearchTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if((e.KeyCode == Keys.Enter))
+            {
+                if(searchTextbox.Text.Length > 0)
+                {
+                    Library.Controller.Clients clients = new Library.Controller.Clients();
+                    Owners = clients.Find(searchTextbox.Text);
+                    clientsList.Items.Clear();
+                    foreach (var Owner in Owners)
+                    {
+                        var item = clientsList.Items.Add(Owner.ID.ToString());
+                        item.SubItems.Add(Owner.FullName.ToString());
+                        item.SubItems.Add(Owner.PetSpecies.ToString());
+                        item.SubItems.Add(Owner.Cellphone.ToString());
+                        item.SubItems.Add(Owner.Address.ToString());
+                        item.SubItems.Add(Owner.DateRegistered.ToString());
+                    }
+                }
+                else
+                {
+                    LoadCustomerView();
+                }
+            }
+            if(e.KeyCode == Keys.Escape)
+            {
+                searchTextbox.Text = String.Empty;
+                searchTextbox.Visible = false;
             }
         }
     }

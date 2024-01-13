@@ -44,6 +44,29 @@ namespace VCMS.Forms.Doctors
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            Library.Controller.Doctors doctors = new Library.Controller.Doctors();
+            if (this.Text == "Add")
+            {
+                doctors.Create(new DoctorModel()
+                {
+                    FirstName = firstNameTextbox.Text,
+                    LastName = lastNameTextbox.Text,
+                    Sex = sexCombobox.Text,
+                    Cellphone = contactTextbox.Text,
+                    Address = addressTextbox.Text,
+                    Birthday = birthdayDatepicker.Value
+                });
+            }
+            else
+            {
+                Doctor.FirstName = firstNameTextbox.Text;
+                Doctor.LastName = lastNameTextbox.Text;
+                Doctor.Sex = sexCombobox.Text;
+                Doctor.Cellphone = contactTextbox.Text.Trim();
+                Doctor.Address = addressTextbox.Text;
+                Doctor.Birthday = birthdayDatepicker.Value;
+                doctors.Update(Doctor);
+            }
             this.Close();
         }
 

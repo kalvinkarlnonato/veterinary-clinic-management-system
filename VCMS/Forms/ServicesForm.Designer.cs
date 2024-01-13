@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.medicationButton = new FontAwesome.Sharp.IconButton();
+            this.serviceButton = new FontAwesome.Sharp.IconButton();
             this.containerPanel = new System.Windows.Forms.TableLayoutPanel();
             this.checkupButton = new FontAwesome.Sharp.IconButton();
             this.containerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // medicationButton
+            // serviceButton
             // 
-            this.medicationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.medicationButton.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.medicationButton.IconChar = FontAwesome.Sharp.IconChar.Syringe;
-            this.medicationButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.medicationButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.medicationButton.Location = new System.Drawing.Point(21, 3);
-            this.medicationButton.Name = "medicationButton";
-            this.medicationButton.Size = new System.Drawing.Size(211, 549);
-            this.medicationButton.TabIndex = 0;
-            this.medicationButton.Text = "Medication";
-            this.medicationButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.medicationButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.medicationButton.UseVisualStyleBackColor = true;
+            this.serviceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.serviceButton.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serviceButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.serviceButton.IconChar = FontAwesome.Sharp.IconChar.Paw;
+            this.serviceButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.serviceButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.serviceButton.Location = new System.Drawing.Point(21, 3);
+            this.serviceButton.Name = "serviceButton";
+            this.serviceButton.Size = new System.Drawing.Size(211, 549);
+            this.serviceButton.TabIndex = 0;
+            this.serviceButton.Text = "Service";
+            this.serviceButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.serviceButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.serviceButton.UseVisualStyleBackColor = true;
+            this.serviceButton.Click += new System.EventHandler(this.ServiceButton_Click);
             // 
             // containerPanel
             // 
@@ -58,7 +59,7 @@
             this.containerPanel.ColumnCount = 2;
             this.containerPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.containerPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.containerPanel.Controls.Add(this.medicationButton, 0, 0);
+            this.containerPanel.Controls.Add(this.serviceButton, 0, 0);
             this.containerPanel.Controls.Add(this.checkupButton, 1, 0);
             this.containerPanel.Location = new System.Drawing.Point(270, 12);
             this.containerPanel.Name = "containerPanel";
@@ -111,7 +112,7 @@
         #endregion
 
         private System.Windows.Forms.FontDialog fontDialog1;
-        private FontAwesome.Sharp.IconButton medicationButton;
+        private FontAwesome.Sharp.IconButton serviceButton;
         private System.Windows.Forms.TableLayoutPanel containerPanel;
         private FontAwesome.Sharp.IconButton checkupButton;
     }

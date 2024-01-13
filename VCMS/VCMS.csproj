@@ -117,6 +117,12 @@
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Libraries\LibrariesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\LibrariesForm.Designer.cs">
+      <DependentUpon>LibrariesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,12 @@
     <Compile Include="Forms\ServicesForm.Designer.cs">
       <DependentUpon>ServicesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Services\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Services\ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,9 @@
       <DependentUpon>HomeForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\LibrariesForm.resx">
+      <DependentUpon>LibrariesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServicesForm.resx">
       <DependentUpon>ServicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Services\ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

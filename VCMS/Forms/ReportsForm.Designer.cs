@@ -28,33 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportsList = new MaterialSkin.Controls.MaterialListView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportsForm));
             this.reportsComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.reportsLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.printBills = new System.Drawing.Printing.PrintDocument();
+            this.previewBills = new System.Windows.Forms.PrintPreviewDialog();
+            this.printBillsPanel = new System.Windows.Forms.Panel();
+            this.reportsList = new MaterialSkin.Controls.MaterialListView();
+            this.printBillsPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // reportsList
-            // 
-            this.reportsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportsList.AutoSizeTable = false;
-            this.reportsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.reportsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportsList.Depth = 0;
-            this.reportsList.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportsList.FullRowSelect = true;
-            this.reportsList.HideSelection = false;
-            this.reportsList.Location = new System.Drawing.Point(0, 67);
-            this.reportsList.MinimumSize = new System.Drawing.Size(200, 100);
-            this.reportsList.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.reportsList.MouseState = MaterialSkin.MouseState.OUT;
-            this.reportsList.Name = "reportsList";
-            this.reportsList.OwnerDraw = true;
-            this.reportsList.Size = new System.Drawing.Size(811, 373);
-            this.reportsList.TabIndex = 3;
-            this.reportsList.UseCompatibleStateImageBehavior = false;
-            this.reportsList.View = System.Windows.Forms.View.Details;
             // 
             // reportsComboBox
             // 
@@ -89,9 +72,10 @@
             this.reportsComboBox.MaxDropDownItems = 4;
             this.reportsComboBox.MouseState = MaterialSkin.MouseState.OUT;
             this.reportsComboBox.Name = "reportsComboBox";
-            this.reportsComboBox.Size = new System.Drawing.Size(622, 49);
+            this.reportsComboBox.Size = new System.Drawing.Size(810, 49);
             this.reportsComboBox.StartIndex = 0;
             this.reportsComboBox.TabIndex = 2;
+            this.reportsComboBox.SelectedIndexChanged += new System.EventHandler(this.reportsComboBox_SelectedIndexChanged);
             // 
             // reportsLabel
             // 
@@ -105,16 +89,82 @@
             this.reportsLabel.TabIndex = 4;
             this.reportsLabel.Text = "List of reports";
             // 
+            // materialButton1
+            // 
+            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton1.AutoSize = false;
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(994, 17);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(120, 36);
+            this.materialButton1.TabIndex = 5;
+            this.materialButton1.Text = "Print";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
+            // previewBills
+            // 
+            this.previewBills.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.previewBills.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.previewBills.ClientSize = new System.Drawing.Size(400, 300);
+            this.previewBills.Enabled = true;
+            this.previewBills.Icon = ((System.Drawing.Icon)(resources.GetObject("previewBills.Icon")));
+            this.previewBills.Name = "previewBills";
+            this.previewBills.Visible = false;
+            // 
+            // printBillsPanel
+            // 
+            this.printBillsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.printBillsPanel.Controls.Add(this.reportsList);
+            this.printBillsPanel.Location = new System.Drawing.Point(1, 67);
+            this.printBillsPanel.Name = "printBillsPanel";
+            this.printBillsPanel.Size = new System.Drawing.Size(1126, 653);
+            this.printBillsPanel.TabIndex = 6;
+            // 
+            // reportsList
+            // 
+            this.reportsList.AutoSizeTable = false;
+            this.reportsList.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
+            this.reportsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportsList.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.reportsList.Depth = 0;
+            this.reportsList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportsList.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportsList.FullRowSelect = true;
+            this.reportsList.HideSelection = false;
+            this.reportsList.Location = new System.Drawing.Point(0, 0);
+            this.reportsList.MinimumSize = new System.Drawing.Size(200, 100);
+            this.reportsList.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.reportsList.MouseState = MaterialSkin.MouseState.OUT;
+            this.reportsList.Name = "reportsList";
+            this.reportsList.OwnerDraw = true;
+            this.reportsList.Size = new System.Drawing.Size(1126, 653);
+            this.reportsList.TabIndex = 4;
+            this.reportsList.UseCompatibleStateImageBehavior = false;
+            this.reportsList.View = System.Windows.Forms.View.Details;
+            // 
             // ReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
-            this.ClientSize = new System.Drawing.Size(811, 440);
+            this.ClientSize = new System.Drawing.Size(1127, 721);
             this.ControlBox = false;
+            this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.reportsLabel);
-            this.Controls.Add(this.reportsList);
             this.Controls.Add(this.reportsComboBox);
+            this.Controls.Add(this.printBillsPanel);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::VCMS.Properties.Settings.Default, "GlobalFontColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::VCMS.Properties.Settings.Default, "GlobalFontStyle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -125,14 +175,20 @@
             this.Padding = new System.Windows.Forms.Padding(0);
             this.Sizable = false;
             this.Text = "Reports";
+            this.Load += new System.EventHandler(this.ReportsForm_Load);
+            this.printBillsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialListView reportsList;
         private MaterialSkin.Controls.MaterialComboBox reportsComboBox;
         private MaterialSkin.Controls.MaterialLabel reportsLabel;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private System.Drawing.Printing.PrintDocument printBills;
+        private System.Windows.Forms.PrintPreviewDialog previewBills;
+        private System.Windows.Forms.Panel printBillsPanel;
+        private MaterialSkin.Controls.MaterialListView reportsList;
     }
 }

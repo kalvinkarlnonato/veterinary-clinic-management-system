@@ -20,16 +20,6 @@ namespace VCMS.Forms
         public DoctorsForm()
         {
             InitializeComponent();
-
-            Doctors = new List<DoctorModel>() {
-                new DoctorModel() { ID = 0, FirstName = "Juan", LastName="  Dela Cruz", Sex = "Male", Address="Tuguegarao City", Cellphone = "0998-765-4321", Birthday = DateTime.Parse("1/9/1997") },
-                new DoctorModel() { ID = 1, FirstName = "Nathaniel", LastName="  Dela Cruz", Sex = "Male", Address = "Tuguegarao City", Cellphone = "0998-765-4321", Birthday = DateTime.Parse("2/9/1998") },
-                new DoctorModel() { ID = 2, FirstName = "Jacob", LastName="  Dela Cruz", Sex = "Male", Address = "Tuguegarao City", Cellphone = "0998-765-4321", Birthday = DateTime.Parse("3/9/1999") },
-                new DoctorModel() { ID = 3, FirstName = "Gabriel", LastName="  Dela Cruz", Sex = "Male", Address = "Tuguegarao City", Cellphone = "0998-765-4321", Birthday = DateTime.Parse("4/9/2000") },
-                new DoctorModel() { ID = 4, FirstName = "Joshua", LastName="  Dela Cruz", Sex = "Male", Address = "Tuguegarao City", Cellphone = "0998-765-4321", Birthday = DateTime.Parse("5/9/2005") },
-                new DoctorModel() { ID = 5, FirstName = "Angelo", LastName="  Dela Cruz", Sex = "Male", Address = "Tuguegarao City", Cellphone = "0998-765-4321", Birthday = DateTime.Parse("6/9/2015") }
-            };
-
             doctorsList.Columns.Add("ID", 80);
             doctorsList.Columns.Add("Name", 350);
             doctorsList.Columns.Add("Gender", 150);
@@ -37,7 +27,48 @@ namespace VCMS.Forms
             doctorsList.Columns.Add("Age", 200);
             doctorsList.Columns.Add("Birthday", 200);
             doctorsList.Columns.Add("Address", 400);
+        }
 
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            searchTextbox.Visible = !searchTextbox.Visible;
+            searchTextbox.Focus();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            ManageForm form = new ManageForm();
+            form.ShowDialog();
+            LoadDoctorView();
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            if (doctorsList.SelectedItems.Count == 0) { return; }
+            int id = int.Parse(doctorsList.SelectedItems[0].Text);
+            DoctorModel doctor = Doctors.Where(d => d.ID == id).First();
+            ManageForm form = new ManageForm() { Doctor = doctor };
+            form.ShowDialog();
+            LoadDoctorView();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (doctorsList.SelectedItems.Count == 0) return;
+            string message = $"A record about {doctorsList.SelectedItems[0].SubItems[1].Text} will all be deleted permanently. Please consider this before clicking yes, We are not responsible of any lose about this record.";
+            MessageBoxResult x = System.Windows.MessageBox.Show(message, "Are you sure?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (x == MessageBoxResult.No) return;
+            Library.Controller.Doctors doctors = new Library.Controller.Doctors();
+            int thisid = Convert.ToInt32(doctorsList.SelectedItems[0].SubItems[0].Text);
+            doctors.Delete(thisid);
+            LoadDoctorView();
+        }
+
+        private void LoadDoctorView()
+        {
+            doctorsList.Items.Clear();
+            Library.Controller.Doctors doctors = new Library.Controller.Doctors();
+            Doctors = doctors.AllDoctors();
             foreach (var doctor in Doctors)
             {
                 ListViewItem item = new ListViewItem();
@@ -52,32 +83,36 @@ namespace VCMS.Forms
             }
         }
 
-        private void SearchButton_Click(object sender, EventArgs e)
+        private void DoctorsForm_Load(object sender, EventArgs e)
         {
-            searchTextbox.Visible = !searchTextbox.Visible;
-            searchTextbox.Focus();
+            LoadDoctorView();
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
+        private void SearchTextbox_KeyDown(object sender, KeyEventArgs e)
         {
-            ManageForm form = new ManageForm();
-            form.ShowDialog();
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            if (doctorsList.SelectedItems.Count == 0) { return; }
-            int id = int.Parse(doctorsList.SelectedItems[0].Text);
-            DoctorModel doctor = Doctors.Where(d => d.ID == id).First();
-            ManageForm form = new ManageForm() { Doctor = doctor };
-            form.ShowDialog();
-        }
-
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-            if (doctorsList.SelectedItems.Count == 0) { return; }
-            string message = $"A record about {doctorsList.SelectedItems[0].SubItems[1].Text} will all be deleted permanently. Please consider this before clicking yes, We are not responsible of any lose about this record.";
-            System.Windows.MessageBox.Show(message, "Are you sure?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if(e.KeyCode == Keys.Enter)
+            {
+                doctorsList.Items.Clear();
+                Library.Controller.Doctors doctors = new Library.Controller.Doctors();
+                Doctors = doctors.Find(searchTextbox.Text);
+                foreach (var doctor in Doctors)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems[0].Text = doctor.ID.ToString();
+                    item.SubItems.Add(doctor.FullName.ToString());
+                    item.SubItems.Add(doctor.Sex.ToString());
+                    item.SubItems.Add(doctor.Cellphone.ToString());
+                    item.SubItems.Add(doctor.Age.ToString());
+                    item.SubItems.Add(doctor.Birthday.ToString("MMM dd,yyyy"));
+                    item.SubItems.Add(doctor.Address.ToString());
+                    doctorsList.Items.Add(item);
+                }
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                searchTextbox.Text = String.Empty;
+                searchTextbox.Visible = false;
+            }
         }
     }
 }

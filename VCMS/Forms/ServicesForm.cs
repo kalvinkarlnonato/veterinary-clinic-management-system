@@ -24,5 +24,11 @@ namespace VCMS.Forms
             CheckupForm checkupForm = new CheckupForm();
             checkupForm.ShowDialog();
         }
+
+        private void ServiceButton_Click(object sender, EventArgs e)
+        {
+            ServiceForm serviceForm = new ServiceForm();
+            serviceForm.ShowDialog();
+        }
     }
 }

@@ -28,71 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.balanceTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.amountTextbox = new MaterialSkin.Controls.MaterialTextBox();
-            this.changeTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.printButton = new MaterialSkin.Controls.MaterialButton();
             this.closeButton = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(6, 86);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(58, 19);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Balance";
             // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(6, 161);
+            this.materialLabel2.Location = new System.Drawing.Point(6, 80);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(57, 19);
             this.materialLabel2.TabIndex = 0;
-            this.materialLabel2.Text = "Amount";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(6, 236);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(55, 19);
-            this.materialLabel3.TabIndex = 0;
-            this.materialLabel3.Text = "Change";
-            // 
-            // balanceTextbox
-            // 
-            this.balanceTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.balanceTextbox.AnimateReadOnly = false;
-            this.balanceTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.balanceTextbox.Depth = 0;
-            this.balanceTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.balanceTextbox.LeadingIcon = null;
-            this.balanceTextbox.Location = new System.Drawing.Point(9, 108);
-            this.balanceTextbox.MaxLength = 50;
-            this.balanceTextbox.MouseState = MaterialSkin.MouseState.OUT;
-            this.balanceTextbox.Multiline = false;
-            this.balanceTextbox.Name = "balanceTextbox";
-            this.balanceTextbox.ReadOnly = true;
-            this.balanceTextbox.Size = new System.Drawing.Size(348, 50);
-            this.balanceTextbox.TabIndex = 2;
-            this.balanceTextbox.Text = "";
-            this.balanceTextbox.TrailingIcon = null;
+            this.materialLabel2.Text = "Payment";
             // 
             // amountTextbox
             // 
@@ -103,7 +55,7 @@
             this.amountTextbox.Depth = 0;
             this.amountTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.amountTextbox.LeadingIcon = null;
-            this.amountTextbox.Location = new System.Drawing.Point(9, 183);
+            this.amountTextbox.Location = new System.Drawing.Point(9, 110);
             this.amountTextbox.MaxLength = 50;
             this.amountTextbox.MouseState = MaterialSkin.MouseState.OUT;
             this.amountTextbox.Multiline = false;
@@ -112,28 +64,7 @@
             this.amountTextbox.TabIndex = 0;
             this.amountTextbox.Text = "";
             this.amountTextbox.TrailingIcon = null;
-            this.amountTextbox.TextChanged += new System.EventHandler(this.AmountTextbox_TextChanged);
             this.amountTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AmountTextbox_KeyPress);
-            // 
-            // changeTextbox
-            // 
-            this.changeTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeTextbox.AnimateReadOnly = false;
-            this.changeTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.changeTextbox.Depth = 0;
-            this.changeTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.changeTextbox.LeadingIcon = null;
-            this.changeTextbox.Location = new System.Drawing.Point(9, 258);
-            this.changeTextbox.MaxLength = 50;
-            this.changeTextbox.MouseState = MaterialSkin.MouseState.OUT;
-            this.changeTextbox.Multiline = false;
-            this.changeTextbox.Name = "changeTextbox";
-            this.changeTextbox.ReadOnly = true;
-            this.changeTextbox.Size = new System.Drawing.Size(348, 50);
-            this.changeTextbox.TabIndex = 1;
-            this.changeTextbox.Text = "";
-            this.changeTextbox.TrailingIcon = null;
             // 
             // printButton
             // 
@@ -144,7 +75,7 @@
             this.printButton.Depth = 0;
             this.printButton.HighEmphasis = true;
             this.printButton.Icon = null;
-            this.printButton.Location = new System.Drawing.Point(238, 317);
+            this.printButton.Location = new System.Drawing.Point(238, 175);
             this.printButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.printButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.printButton.Name = "printButton";
@@ -165,7 +96,7 @@
             this.closeButton.Depth = 0;
             this.closeButton.HighEmphasis = true;
             this.closeButton.Icon = null;
-            this.closeButton.Location = new System.Drawing.Point(9, 317);
+            this.closeButton.Location = new System.Drawing.Point(9, 175);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
@@ -183,15 +114,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
-            this.ClientSize = new System.Drawing.Size(364, 366);
+            this.ClientSize = new System.Drawing.Size(367, 225);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.printButton);
-            this.Controls.Add(this.changeTextbox);
             this.Controls.Add(this.amountTextbox);
-            this.Controls.Add(this.balanceTextbox);
-            this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::VCMS.Properties.Settings.Default, "GlobalBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Name = "PaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -204,12 +131,8 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialTextBox balanceTextbox;
         private MaterialSkin.Controls.MaterialTextBox amountTextbox;
-        private MaterialSkin.Controls.MaterialTextBox changeTextbox;
         private MaterialSkin.Controls.MaterialButton printButton;
         private MaterialSkin.Controls.MaterialButton closeButton;
     }

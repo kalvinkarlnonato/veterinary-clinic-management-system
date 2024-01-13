@@ -87,7 +87,7 @@
             this.billingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.billingsButton.IconSize = 40;
             this.billingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.billingsButton.Location = new System.Drawing.Point(0, 357);
+            this.billingsButton.Location = new System.Drawing.Point(0, 305);
             this.billingsButton.Name = "billingsButton";
             this.billingsButton.Size = new System.Drawing.Size(250, 44);
             this.billingsButton.TabIndex = 21;
@@ -112,7 +112,7 @@
             this.reportsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.reportsButton.IconSize = 40;
             this.reportsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportsButton.Location = new System.Drawing.Point(0, 404);
+            this.reportsButton.Location = new System.Drawing.Point(0, 352);
             this.reportsButton.Name = "reportsButton";
             this.reportsButton.Size = new System.Drawing.Size(250, 44);
             this.reportsButton.TabIndex = 21;
@@ -137,7 +137,7 @@
             this.schedulesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.schedulesButton.IconSize = 40;
             this.schedulesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.schedulesButton.Location = new System.Drawing.Point(0, 310);
+            this.schedulesButton.Location = new System.Drawing.Point(0, 535);
             this.schedulesButton.Name = "schedulesButton";
             this.schedulesButton.Size = new System.Drawing.Size(250, 44);
             this.schedulesButton.TabIndex = 20;
@@ -145,6 +145,7 @@
             this.schedulesButton.Text = "Schedules";
             this.schedulesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.schedulesButton.UseVisualStyleBackColor = true;
+            this.schedulesButton.Visible = false;
             this.schedulesButton.Click += new System.EventHandler(this.SchedulesButton_Click);
             // 
             // burgerButton
@@ -220,7 +221,7 @@
             this.receptionistButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.receptionistButton.IconSize = 40;
             this.receptionistButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.receptionistButton.Location = new System.Drawing.Point(0, 263);
+            this.receptionistButton.Location = new System.Drawing.Point(0, 258);
             this.receptionistButton.Name = "receptionistButton";
             this.receptionistButton.Size = new System.Drawing.Size(250, 44);
             this.receptionistButton.TabIndex = 6;
@@ -245,7 +246,7 @@
             this.servicesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.servicesButton.IconSize = 40;
             this.servicesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.servicesButton.Location = new System.Drawing.Point(0, 216);
+            this.servicesButton.Location = new System.Drawing.Point(0, 211);
             this.servicesButton.Name = "servicesButton";
             this.servicesButton.Size = new System.Drawing.Size(250, 44);
             this.servicesButton.TabIndex = 5;
@@ -270,7 +271,7 @@
             this.doctorsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.doctorsButton.IconSize = 40;
             this.doctorsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.doctorsButton.Location = new System.Drawing.Point(0, 169);
+            this.doctorsButton.Location = new System.Drawing.Point(0, 164);
             this.doctorsButton.Name = "doctorsButton";
             this.doctorsButton.Size = new System.Drawing.Size(250, 44);
             this.doctorsButton.TabIndex = 4;
@@ -310,7 +311,7 @@
             this.customersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.customersButton.IconSize = 40;
             this.customersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customersButton.Location = new System.Drawing.Point(0, 122);
+            this.customersButton.Location = new System.Drawing.Point(0, 117);
             this.customersButton.Name = "customersButton";
             this.customersButton.Size = new System.Drawing.Size(250, 44);
             this.customersButton.TabIndex = 2;
@@ -438,6 +439,7 @@
             this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "Veterinary Clinic Management System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
             this.buttonsPanel.ResumeLayout(false);

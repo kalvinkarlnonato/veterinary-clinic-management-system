@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using VCMS.Library.Models;
 using MaterialSkin.Controls;
 using VCMS.Library;
+using VCMS.Library.Controller;
 
 namespace VCMS.Forms.Customers
 {
@@ -55,9 +56,9 @@ namespace VCMS.Forms.Customers
             }
             if (pet != null)
             {
-                if(pet.Name != null)
+                if(pet.PetName != null)
                 {
-                    petNameTextbox.Text = pet.Name;
+                    petNameTextbox.Text = pet.PetName;
                     speciesCombobox.SelectedIndex = speciesCombobox.Items.IndexOf(pet.Species);
                     breedCombobox.SelectedIndex = breedCombobox.Items.IndexOf(pet.Breed);
                     birthdayDatepicker.Value = pet.Birthday;
@@ -101,6 +102,58 @@ namespace VCMS.Forms.Customers
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            if (clientsInfoPanel.Visible)
+            {
+                Library.Controller.Clients clients = new Library.Controller.Clients();
+                if (owner.ID == 0)
+                {
+                    OwnerModel client = new OwnerModel()
+                    {
+                        FirstName = firstNameTextbox.Text,
+                        LastName = lastNameTextbox.Text,
+                        Address = addressTextbox.Text,
+                        Cellphone = contactTextbox.Text,
+                    };
+                    owner = clients.Create(client);
+                    pet = new PetModel();
+                    pet.OwnerID = owner.ID;
+                    pet.PetName = petNameTextbox.Text;
+                    pet.Species = speciesCombobox.Text;
+                    pet.Breed = breedCombobox.Text;
+                    pet.ColorMarking = colormarkingTextbox.Text;
+                    pet.Birthday = birthdayDatepicker.Value;
+                    pet.Sex = sexCombobox.Text;
+                    Library.Controller.Pets pets = new Library.Controller.Pets();
+                    pets.Create(pet);
+                }
+                else
+                {
+                    OwnerModel client = new OwnerModel()
+                    {
+                        ID = owner.ID,
+                        FirstName = firstNameTextbox.Text,
+                        LastName = lastNameTextbox.Text,
+                        Address = addressTextbox.Text,
+                        Cellphone = contactTextbox.Text,
+                    };
+                    clients.Update(client);
+                }
+            }
+            else
+            {
+                pet.PetName = petNameTextbox.Text;
+                pet.Species = speciesCombobox.Text;
+                pet.Breed = breedCombobox.Text;
+                pet.ColorMarking = colormarkingTextbox.Text;
+                pet.Birthday = birthdayDatepicker.Value;
+                pet.Sex = sexCombobox.Text;
+                Library.Controller.Pets pets = new Library.Controller.Pets();
+                if (pet.ID>0)
+                    pets.Update(pet);
+                else
+                    pets.Create(pet);
+                
+            }
             this.Close();
         }
 

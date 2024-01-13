@@ -43,8 +43,10 @@
             this.costumersLabel = new System.Windows.Forms.Label();
             this.costumersPicture = new System.Windows.Forms.PictureBox();
             this.containerPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.darkThemeSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.aboutButton = new MaterialSkin.Controls.MaterialButton();
+            this.librariesButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.bannerPictureBox)).BeginInit();
             this.servicesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesPicture)).BeginInit();
@@ -89,7 +91,7 @@
             this.servicesCountLabel.Name = "servicesCountLabel";
             this.servicesCountLabel.Size = new System.Drawing.Size(30, 24);
             this.servicesCountLabel.TabIndex = 13;
-            this.servicesCountLabel.Text = "##";
+            this.servicesCountLabel.Text = "00";
             // 
             // servicesLabel
             // 
@@ -98,9 +100,9 @@
             this.servicesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.servicesLabel.Location = new System.Drawing.Point(78, 16);
             this.servicesLabel.Name = "servicesLabel";
-            this.servicesLabel.Size = new System.Drawing.Size(82, 24);
+            this.servicesLabel.Size = new System.Drawing.Size(53, 24);
             this.servicesLabel.TabIndex = 12;
-            this.servicesLabel.Text = "Services";
+            this.servicesLabel.Text = "Visits";
             // 
             // servicesPicture
             // 
@@ -134,7 +136,7 @@
             this.doctorsCountLabel.Name = "doctorsCountLabel";
             this.doctorsCountLabel.Size = new System.Drawing.Size(30, 24);
             this.doctorsCountLabel.TabIndex = 13;
-            this.doctorsCountLabel.Text = "##";
+            this.doctorsCountLabel.Text = "01";
             // 
             // doctorsLabel
             // 
@@ -179,7 +181,7 @@
             this.costumersCountLabel.Name = "costumersCountLabel";
             this.costumersCountLabel.Size = new System.Drawing.Size(30, 24);
             this.costumersCountLabel.TabIndex = 13;
-            this.costumersCountLabel.Text = "##";
+            this.costumersCountLabel.Text = "00";
             // 
             // costumersLabel
             // 
@@ -213,6 +215,7 @@
             this.containerPanel.Controls.Add(this.servicesPanel, 3, 1);
             this.containerPanel.Controls.Add(this.costumersPanel, 1, 1);
             this.containerPanel.Controls.Add(this.doctorsPanel, 2, 1);
+            this.containerPanel.Controls.Add(this.label1, 0, 2);
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerPanel.Location = new System.Drawing.Point(0, 231);
             this.containerPanel.Name = "containerPanel";
@@ -224,12 +227,25 @@
             this.containerPanel.Size = new System.Drawing.Size(943, 316);
             this.containerPanel.TabIndex = 18;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.containerPanel.SetColumnSpan(this.label1, 5);
+            this.label1.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(937, 210);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "WELCOME!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // darkThemeSwitch
             // 
             this.darkThemeSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.darkThemeSwitch.AutoSize = true;
             this.darkThemeSwitch.Depth = 0;
-            this.darkThemeSwitch.Location = new System.Drawing.Point(799, 57);
+            this.darkThemeSwitch.Location = new System.Drawing.Point(799, 64);
             this.darkThemeSwitch.Margin = new System.Windows.Forms.Padding(0);
             this.darkThemeSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
             this.darkThemeSwitch.MouseState = MaterialSkin.MouseState.HOVER;
@@ -263,6 +279,29 @@
             this.aboutButton.UseVisualStyleBackColor = true;
             this.aboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
+            // librariesButton
+            // 
+            this.librariesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.librariesButton.AutoSize = false;
+            this.librariesButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.librariesButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.librariesButton.Depth = 0;
+            this.librariesButton.HighEmphasis = true;
+            this.librariesButton.Icon = null;
+            this.librariesButton.Location = new System.Drawing.Point(799, 93);
+            this.librariesButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.librariesButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.librariesButton.Name = "librariesButton";
+            this.librariesButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.librariesButton.Size = new System.Drawing.Size(131, 36);
+            this.librariesButton.TabIndex = 21;
+            this.librariesButton.Text = "Libraries";
+            this.librariesButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.librariesButton.UseAccentColor = false;
+            this.librariesButton.UseVisualStyleBackColor = true;
+            this.librariesButton.Visible = false;
+            this.librariesButton.Click += new System.EventHandler(this.LibrariesButton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -270,6 +309,7 @@
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(943, 547);
             this.ControlBox = false;
+            this.Controls.Add(this.librariesButton);
             this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.containerPanel);
             this.Controls.Add(this.darkThemeSwitch);
@@ -317,5 +357,7 @@
         private System.Windows.Forms.TableLayoutPanel containerPanel;
         private MaterialSkin.Controls.MaterialSwitch darkThemeSwitch;
         private MaterialSkin.Controls.MaterialButton aboutButton;
+        private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialButton librariesButton;
     }
 }

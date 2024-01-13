@@ -33,17 +33,7 @@ namespace VCMS.Forms.Customers
 
         private void PetsForm_Load(object sender, EventArgs e)
         {
-            foreach (PetModel pet in owner.Pets)
-            {
-                ListViewItem item = petsList.Items.Add(pet.ID.ToString());
-                item.SubItems.Add(pet.Name);
-                item.SubItems.Add(pet.Species);
-                item.SubItems.Add(pet.Breed);
-                item.SubItems.Add(pet.ColorMarking);
-                item.SubItems.Add(pet.Birthday.ToString());
-                item.SubItems.Add(pet.Sex);
-            }
-            this.Text = owner.FullName + "'s Pets";
+            LoadPetView();
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
@@ -59,27 +49,51 @@ namespace VCMS.Forms.Customers
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            PetModel pet = new PetModel();
+            PetModel pet = new PetModel() { OwnerID = owner.ID };
             ManageForm form = new ManageForm { pet = pet };
             form.Text = "Add " + owner.FullName + "'s Pet";
             form.ShowDialog();
+            LoadPetView();
         }
 
         private void EditButton_Click(object sender, EventArgs e)
         {
             if (petsList.SelectedItems.Count == 0) { return; }
             int petId = int.Parse(petsList.SelectedItems[0].Text);
-            PetModel pet = owner.Pets.Where(p => p.ID == petId).First();
+            Library.Controller.Pets cpets = new Library.Controller.Pets();
+            PetModel pet = cpets.FindPetsByID(petId).First();
             ManageForm form = new ManageForm { pet = pet };
             form.Text = "Edit " + owner.FullName + "'s Pet";
             form.ShowDialog();
+            LoadPetView();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            if (petsList.SelectedItems.Count == 0) { return; }
+            if (petsList.SelectedItems.Count == 0) return;
             string message = $"All checkups and medications about {petsList.SelectedItems[0].SubItems[1].Text} will be deleted permanently. Are you sure to continue?.";
-            System.Windows.MessageBox.Show(message, "Are you sure?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            MessageBoxResult x = System.Windows.MessageBox.Show(message, "Are you sure?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if(x == MessageBoxResult.No) return;
+            Library.Controller.Pets pets = new Library.Controller.Pets();
+            int thisid = Convert.ToInt32(petsList.SelectedItems[0].SubItems[0].Text);
+            pets.Delete(thisid);
+            LoadPetView();
+        }
+        private void LoadPetView()
+        {
+            petsList.Items.Clear();
+            Library.Controller.Pets pets = new Library.Controller.Pets();
+            foreach (PetModel pet in pets.FindPetsByClientID(owner.ID))
+            {
+                ListViewItem item = petsList.Items.Add(pet.ID.ToString());
+                item.SubItems.Add(pet.PetName);
+                item.SubItems.Add(pet.Species);
+                item.SubItems.Add(pet.Breed);
+                item.SubItems.Add(pet.ColorMarking);
+                item.SubItems.Add(pet.Birthday.ToString("MM/dd/yyyy"));
+                item.SubItems.Add(pet.Sex);
+            }
+            this.Text = owner.FullName + "'s Pets";
         }
     }
 }

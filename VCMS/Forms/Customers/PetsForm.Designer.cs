@@ -142,6 +142,7 @@
             this.searchButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.searchButton.UseAccentColor = false;
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Visible = false;
             this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // searchTextbox

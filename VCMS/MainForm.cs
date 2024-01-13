@@ -219,5 +219,25 @@ namespace VCMS
             loginForm.Closed += (s, args) => this.Close();
             loginForm.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if(Config.CurrentUser.Role == "staff")
+            {
+                doctorsButton.Visible = false;
+                receptionistButton.Visible = false;
+                servicesButton.Location = new Point(0, 164);
+                billingsButton.Location = new Point(0, 211);
+                reportsButton.Location = new Point(0, 258);
+            }
+            else
+            {
+                doctorsButton.Visible = true;
+                receptionistButton.Visible = true;
+                servicesButton.Location = new Point(0, 211);
+                billingsButton.Location = new Point(0, 305);
+                reportsButton.Location = new Point(0, 352);
+            }
+        }
     }
 }

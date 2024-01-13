@@ -69,7 +69,6 @@
             this.closeButton.TabIndex = 3;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
-            this.closeButton.MouseEnter += new System.EventHandler(this.OnMouseEnterButton);
             this.closeButton.MouseLeave += new System.EventHandler(this.OnMouseLeaveButton);
             // 
             // loginButton

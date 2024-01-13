@@ -11,6 +11,7 @@ using VCMS.Library;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using ComponentFactory.Krypton.Toolkit;
+using VCMS.Library.Models;
 
 namespace VCMS.Forms
 {
@@ -38,11 +39,6 @@ namespace VCMS.Forms
         {
             Application.Exit();
         }
-
-        private void OnMouseEnterButton(object sender, EventArgs e)
-        {
-            //closeButton.IconColor = Color.Red;
-        }
         private void OnMouseLeaveButton(object sender, EventArgs e)
         {
             closeButton.IconColor = Properties.Settings.Default.GlobalFontColor;
@@ -51,6 +47,19 @@ namespace VCMS.Forms
         private void LoginButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Config.CurrentUser.DocID = 1;
+            Config.CurrentUser.Name = "Admin";
+            Config.CurrentUser.Role = "Admin";
+            //Library.Controller.Users users = new Library.Controller.Users();
+            //List<UserModel> getUsername = users.getByUsername(materialTextBox1.Text, materialTextBox2.Text);
+            //if (getUsername.Count == 0)
+            //{
+            //    MessageBox.Show("Incorrect username or password", "Ooops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    this.Show();
+            //    return;
+            //}
+            //Config.CurrentUser.Name = getUsername.First().Username;
+            //Config.CurrentUser.Role = getUsername.First().Role;
             var mainForm = new MainForm();
             mainForm.Closed += (s, args) => this.Close();
             mainForm.Show();
