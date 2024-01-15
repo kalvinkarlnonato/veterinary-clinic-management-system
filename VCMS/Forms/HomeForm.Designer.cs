@@ -281,14 +281,13 @@
             // 
             // librariesButton
             // 
-            this.librariesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.librariesButton.AutoSize = false;
             this.librariesButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.librariesButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.librariesButton.Depth = 0;
             this.librariesButton.HighEmphasis = true;
             this.librariesButton.Icon = null;
-            this.librariesButton.Location = new System.Drawing.Point(799, 93);
+            this.librariesButton.Location = new System.Drawing.Point(13, 15);
             this.librariesButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.librariesButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.librariesButton.Name = "librariesButton";
@@ -299,7 +298,6 @@
             this.librariesButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.librariesButton.UseAccentColor = false;
             this.librariesButton.UseVisualStyleBackColor = true;
-            this.librariesButton.Visible = false;
             this.librariesButton.Click += new System.EventHandler(this.LibrariesButton_Click);
             // 
             // HomeForm

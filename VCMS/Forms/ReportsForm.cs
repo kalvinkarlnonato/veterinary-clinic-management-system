@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using VCMS.Forms.Reports;
 using VCMS.Library.Models;
 
 namespace VCMS.Forms
@@ -24,25 +25,6 @@ namespace VCMS.Forms
             reportsList.Columns.Add("Weight/Temp/Complaint", 370);
             reportsList.Columns.Add("Against/Findings", 370);
             reportsList.Columns.Add("Manufacturer/Lab Results", 370);
-        }
-        private Bitmap ImgMemmory;
-        private void PrintPanel(Panel panel)
-        {
-            PrinterSettings printerSettings = new PrinterSettings();
-            printBillsPanel = panel;
-            ImgMemmory = new Bitmap(panel.Width, panel.Height);
-            panel.DrawToBitmap(ImgMemmory, new Rectangle(0, 0, panel.Width, panel.Height));
-            printBills.PrintPage += new PrintPageEventHandler(PrintBills_PrintPage);
-            printBills.DefaultPageSettings.Landscape = true;
-            previewBills.Document = printBills;
-            ((Form)previewBills).Size = new Size(700, 900);
-            ((Form)previewBills).StartPosition = FormStartPosition.CenterParent;
-            previewBills.ShowDialog();
-        }
-        private void PrintBills_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            Rectangle PageArea = e.PageBounds;
-            e.Graphics.DrawImage(ImgMemmory, (PageArea.Width / 2) - ((reportsList.Width + 40) / 2), reportsList.Location.Y);
         }
         private void LoadReportView(int month)
         {
@@ -64,15 +46,16 @@ namespace VCMS.Forms
         {
             LoadReportView(DateTime.Now.Month);
         }
-
-        private void reportsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void ReportsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadReportView(reportsComboBox.SelectedIndex+1);
         }
-
-        private void materialButton1_Click(object sender, EventArgs e)
+        private void PrintButton_Click(object sender, EventArgs e)
         {
-            PrintPanel(printBillsPanel);
+            MonthlyReportsForm form = new MonthlyReportsForm();
+            form.Services = Services;
+            form.month = reportsComboBox.SelectedIndex + 1;
+            form.ShowDialog();
         }
     }
 }

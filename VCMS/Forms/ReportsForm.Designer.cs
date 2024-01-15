@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportsForm));
             this.reportsComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.reportsLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.printButton = new MaterialSkin.Controls.MaterialButton();
             this.printBills = new System.Drawing.Printing.PrintDocument();
             this.previewBills = new System.Windows.Forms.PrintPreviewDialog();
             this.printBillsPanel = new System.Windows.Forms.Panel();
@@ -75,7 +75,7 @@
             this.reportsComboBox.Size = new System.Drawing.Size(810, 49);
             this.reportsComboBox.StartIndex = 0;
             this.reportsComboBox.TabIndex = 2;
-            this.reportsComboBox.SelectedIndexChanged += new System.EventHandler(this.reportsComboBox_SelectedIndexChanged);
+            this.reportsComboBox.SelectedIndexChanged += new System.EventHandler(this.ReportsComboBox_SelectedIndexChanged);
             // 
             // reportsLabel
             // 
@@ -89,27 +89,27 @@
             this.reportsLabel.TabIndex = 4;
             this.reportsLabel.Text = "List of reports";
             // 
-            // materialButton1
+            // printButton
             // 
-            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(994, 17);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(120, 36);
-            this.materialButton1.TabIndex = 5;
-            this.materialButton1.Text = "Print";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            this.printButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.printButton.AutoSize = false;
+            this.printButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.printButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.printButton.Depth = 0;
+            this.printButton.HighEmphasis = true;
+            this.printButton.Icon = null;
+            this.printButton.Location = new System.Drawing.Point(994, 17);
+            this.printButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.printButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.printButton.Name = "printButton";
+            this.printButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.printButton.Size = new System.Drawing.Size(120, 36);
+            this.printButton.TabIndex = 5;
+            this.printButton.Text = "Print";
+            this.printButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.printButton.UseAccentColor = false;
+            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // previewBills
             // 
@@ -161,7 +161,7 @@
             this.BackColor = global::VCMS.Properties.Settings.Default.GlobalBackColor;
             this.ClientSize = new System.Drawing.Size(1127, 721);
             this.ControlBox = false;
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.printButton);
             this.Controls.Add(this.reportsLabel);
             this.Controls.Add(this.reportsComboBox);
             this.Controls.Add(this.printBillsPanel);
@@ -185,7 +185,7 @@
         #endregion
         private MaterialSkin.Controls.MaterialComboBox reportsComboBox;
         private MaterialSkin.Controls.MaterialLabel reportsLabel;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton printButton;
         private System.Drawing.Printing.PrintDocument printBills;
         private System.Windows.Forms.PrintPreviewDialog previewBills;
         private System.Windows.Forms.Panel printBillsPanel;

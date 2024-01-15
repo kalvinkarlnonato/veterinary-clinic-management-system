@@ -37,6 +37,7 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.addressTextbox = new MaterialSkin.Controls.MaterialTextBox();
+            this.contactTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.patientLabel = new System.Windows.Forms.Label();
             this.saveButton = new MaterialSkin.Controls.MaterialButton();
             this.cancelButton = new MaterialSkin.Controls.MaterialButton();
@@ -53,7 +54,6 @@
             this.sexCombobox = new MaterialSkin.Controls.MaterialComboBox();
             this.speciesCombobox = new MaterialSkin.Controls.MaterialComboBox();
             this.breedCombobox = new MaterialSkin.Controls.MaterialComboBox();
-            this.contactTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.clientsInfoPanel.SuspendLayout();
             this.patientsInfoPanel.SuspendLayout();
             this.SuspendLayout();
@@ -207,6 +207,29 @@
             this.addressTextbox.TabIndex = 5;
             this.addressTextbox.Text = "";
             this.addressTextbox.TrailingIcon = null;
+            // 
+            // contactTextbox
+            // 
+            this.contactTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.contactTextbox.AnimateReadOnly = false;
+            this.contactTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactTextbox.Depth = 0;
+            this.contactTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.contactTextbox.Hint = "e.g. 09876543210";
+            this.contactTextbox.LeadingIcon = null;
+            this.contactTextbox.Location = new System.Drawing.Point(3, 153);
+            this.contactTextbox.MaxLength = 11;
+            this.contactTextbox.MouseState = MaterialSkin.MouseState.OUT;
+            this.contactTextbox.Multiline = false;
+            this.contactTextbox.Name = "contactTextbox";
+            this.contactTextbox.Size = new System.Drawing.Size(462, 50);
+            this.contactTextbox.TabIndex = 4;
+            this.contactTextbox.Text = "";
+            this.contactTextbox.TrailingIcon = null;
+            this.contactTextbox.Enter += new System.EventHandler(this.ContactTextbox_Enter);
+            this.contactTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContactTextbox_KeyPress);
+            this.contactTextbox.Leave += new System.EventHandler(this.ContactTextbox_Leave);
             // 
             // patientLabel
             // 
@@ -480,9 +503,6 @@
             this.speciesCombobox.Hint = "[Select]";
             this.speciesCombobox.IntegralHeight = false;
             this.speciesCombobox.ItemHeight = 43;
-            this.speciesCombobox.Items.AddRange(new object[] {
-            "Dog",
-            "Cat"});
             this.speciesCombobox.Location = new System.Drawing.Point(315, 78);
             this.speciesCombobox.MaxDropDownItems = 4;
             this.speciesCombobox.MouseState = MaterialSkin.MouseState.OUT;
@@ -516,29 +536,6 @@
             this.breedCombobox.Size = new System.Drawing.Size(307, 49);
             this.breedCombobox.StartIndex = 0;
             this.breedCombobox.TabIndex = 8;
-            // 
-            // contactTextbox
-            // 
-            this.contactTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.contactTextbox.AnimateReadOnly = false;
-            this.contactTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contactTextbox.Depth = 0;
-            this.contactTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.contactTextbox.Hint = "e.g. 09876543210";
-            this.contactTextbox.LeadingIcon = null;
-            this.contactTextbox.Location = new System.Drawing.Point(3, 153);
-            this.contactTextbox.MaxLength = 11;
-            this.contactTextbox.MouseState = MaterialSkin.MouseState.OUT;
-            this.contactTextbox.Multiline = false;
-            this.contactTextbox.Name = "contactTextbox";
-            this.contactTextbox.Size = new System.Drawing.Size(462, 50);
-            this.contactTextbox.TabIndex = 4;
-            this.contactTextbox.Text = "";
-            this.contactTextbox.TrailingIcon = null;
-            this.contactTextbox.Enter += new System.EventHandler(this.ContactTextbox_Enter);
-            this.contactTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContactTextbox_KeyPress);
-            this.contactTextbox.Leave += new System.EventHandler(this.ContactTextbox_Leave);
             // 
             // ManageForm
             // 

@@ -147,6 +147,12 @@
     <Compile Include="Forms\Reports\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reports\MonthlyReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MonthlyReportsForm.Designer.cs">
+      <DependentUpon>MonthlyReportsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SchedulesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MonthlyReportsForm.resx">
+      <DependentUpon>MonthlyReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SchedulesForm.resx">
       <DependentUpon>SchedulesForm.cs</DependentUpon>

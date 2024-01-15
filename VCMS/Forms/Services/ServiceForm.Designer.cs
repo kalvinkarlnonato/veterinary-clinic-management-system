@@ -239,12 +239,6 @@
             this.serviceCombobox.Hint = "[Select service]";
             this.serviceCombobox.IntegralHeight = false;
             this.serviceCombobox.ItemHeight = 43;
-            this.serviceCombobox.Items.AddRange(new object[] {
-            "Grooming",
-            "Vaccination",
-            "Deworming",
-            "Anti-tick and Flea Preventives",
-            "Confinement"});
             this.serviceCombobox.Location = new System.Drawing.Point(578, 24);
             this.serviceCombobox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 4);
             this.serviceCombobox.MaxDropDownItems = 4;
@@ -271,7 +265,7 @@
             this.submitButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.submitButton.Size = new System.Drawing.Size(175, 44);
             this.submitButton.TabIndex = 13;
-            this.submitButton.Text = "Submit";
+            this.submitButton.Text = "Save";
             this.submitButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.submitButton.UseAccentColor = false;
             this.submitButton.UseVisualStyleBackColor = true;

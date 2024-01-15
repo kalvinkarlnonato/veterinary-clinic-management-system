@@ -71,7 +71,7 @@
             this.submitButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.submitButton.Size = new System.Drawing.Size(150, 36);
             this.submitButton.TabIndex = 6;
-            this.submitButton.Text = "Submit";
+            this.submitButton.Text = "Save";
             this.submitButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.submitButton.UseAccentColor = false;
             this.submitButton.UseVisualStyleBackColor = true;

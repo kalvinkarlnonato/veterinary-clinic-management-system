@@ -56,6 +56,11 @@ namespace VCMS.Forms.Services
             {
                 customerCombobox.Items.Add(customer.FullName);
             }
+            serviceCombobox.DataSource = null;
+            Library.Controller.Libraries lib = new Library.Controller.Libraries();
+            List<LibraryModel> species = lib.FinstLibrariesByCategory("Service");
+            serviceCombobox.DataSource = species;
+            serviceCombobox.DisplayMember = "Description";
         }
 
         private void customerCombobox_SelectedIndexChanged(object sender, EventArgs e)
